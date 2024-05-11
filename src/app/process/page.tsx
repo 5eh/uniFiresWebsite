@@ -13,7 +13,6 @@ import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
 import background from '@/images/background.png'
 import background2 from '@/images/background2.png'
-import background3 from '@/images/background3.png'
 
 function Section({
   title,
@@ -111,7 +110,7 @@ function Build() {
     <Section title="BUIDL" image={{ src: background2, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Following the discovery phase at{" "}
+          Following the discovery phase at{' '}
           <strong className="font-semibold text-neutral-950">uniFires</strong>,
           our team crafts a detailed and comprehensive roadmap for each
           blockchain product we are tasked to enhance. This roadmap is
@@ -144,14 +143,12 @@ function Build() {
 
 function Deliver() {
   return (
-    <Section title="COMMUNITY" image={{ src: background3, shape: 2 }}>
+    <Section title="COMMUNITY" image={{ src: background2, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
           Strategically, this allows for a final revision of the budget before
-          the projects launch, ensuring all necessary
-         {" "} <strong className="font-semibold text-neutral-950">
-         resources
-          </strong>{' '}
+          the projects launch, ensuring all necessary{' '}
+          <strong className="font-semibold text-neutral-950">resources</strong>{' '}
           are fully aligned with the project’s expanded scope.
         </p>
         <p>
@@ -198,7 +195,7 @@ function Deliver() {
 function Values() {
   return (
     <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
-      <div className="absolute inset-x-0 bg-red-30 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
+      <div className="bg-red-30 absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
         <GridPattern
           className="absolute inset-0 h-full w-full fill-neutral-100 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
           yOffset={-270}
@@ -261,7 +258,10 @@ export default function Process() {
     <>
       <PageIntro eyebrow="our process" title="HOW UNIFIRE BUILDS">
         <p>
-          We orchestrate and organize blockchain changing infrastructure through structured analysis, design and implementation. Our process is designed to be as efficient as possible, maximizing our resources to provide the best value to the communities we build in.
+          We orchestrate and organize blockchain changing infrastructure through
+          structured analysis, design and implementation. Our process is
+          designed to be as efficient as possible, maximizing our resources to
+          provide the best value to the communities we build in.
         </p>
       </PageIntro>
 
