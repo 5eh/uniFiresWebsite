@@ -11,9 +11,9 @@ import { PageIntro } from '@/components/PageIntro'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
-import imageLaptop from '@/images/laptop.jpg'
-import imageMeeting from '@/images/meeting.jpg'
-import imageWhiteboard from '@/images/whiteboard.jpg'
+import background from '@/images/background.png'
+import background2 from '@/images/background2.png'
+import background3 from '@/images/background3.png'
 
 function Section({
   title,
@@ -55,27 +55,39 @@ function Section({
 
 function Discover() {
   return (
-    <Section title="Discover" image={{ src: imageWhiteboard }}>
+    <Section title="RESEARCH" image={{ src: background }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          We work closely with our clients to understand their{' '}
-          <strong className="font-semibold text-neutral-950">needs</strong> and
-          goals, embedding ourselves in their every day operations to understand
-          what makes their business tick.
+          At uniFires, the collaboration between Cardano and Polkadot extends
+          deeply into understanding the intricacies of blockchain technologies
+          and their application in the{' '}
+          <strong className="font-semibold text-neutral-950">real world</strong>{' '}
+          . Our Research workgroup immerses itself in the ecosystems of our
+          blockchain clients, analyzing their operations to ascertain the core
+          elements that drive their systems.
         </p>
         <p>
-          Our team of private investigators shadow the company director’s for
-          several weeks while our account managers focus on going through their
-          trash. Our senior security experts then perform social engineering
-          hacks to gain access to their{' '}
-          <strong className="font-semibold text-neutral-950">business</strong>{' '}
-          accounts — handing that information over to our forensic accounting
-          team.
+          This process involves our team of blockchain{' '}
+          <strong className="font-semibold text-neutral-950">experts</strong>{' '}
+          who act like private investigators, meticulously studying the work of
+          key developers and leaders within the blockchain space for extensive
+          periods. Our technical teams also engage in detailed analyses,
+          examining the architecture and infrastructure of various blockchain
+          systems, akin to going through every layer of data as if sifting
+          through trash, uncovering every hidden detail. Senior security
+          analysts employ advanced techniques, including social engineering
+          tactics, to test the robustness of security protocols, effectively
+          gaining insights into vulnerabilities and the effectiveness of smart
+          contract implementations.
         </p>
         <p>
-          Once the full audit is complete, we report back with a comprehensive{' '}
-          <strong className="font-semibold text-neutral-950">plan</strong> and,
-          more importantly, a budget.
+          After{' '}
+          <strong className="font-semibold text-neutral-950">thorough</strong>{' '}
+          research and audits, including smart contract reviews and security
+          assessments, we compile our findings into a comprehensive report. This
+          report not only outlines the technical and operational details but
+          also proposes a strategic plan and budget tailored to enhance system
+          interoperability and security within the blockchain framework.
         </p>
       </div>
 
@@ -83,12 +95,12 @@ function Discover() {
         Included in this phase
       </h3>
       <TagList className="mt-4">
-        <TagListItem>In-depth questionnaires</TagListItem>
-        <TagListItem>Feasibility studies</TagListItem>
-        <TagListItem>Blood samples</TagListItem>
-        <TagListItem>Employee surveys</TagListItem>
-        <TagListItem>Proofs-of-concept</TagListItem>
-        <TagListItem>Forensic audit</TagListItem>
+        <TagListItem>Blockchain relevancy</TagListItem>
+        <TagListItem>Developers and key drivers</TagListItem>
+        <TagListItem>System architecture</TagListItem>
+        <TagListItem>Blockchain infrastructure</TagListItem>
+        <TagListItem>Hacks and proofs</TagListItem>
+        <TagListItem>Smart contract audits</TagListItem>
       </TagList>
     </Section>
   )
@@ -96,70 +108,69 @@ function Discover() {
 
 function Build() {
   return (
-    <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
+    <Section title="BUIDL" image={{ src: background2, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Based off of the discovery phase, we develop a comprehensive roadmap
-          for each product and start working towards delivery. The roadmap is an
-          intricately tangled mess of technical nonsense designed to drag the
-          project out as long as possible.
+          Following the discovery phase at{" "}
+          <strong className="font-semibold text-neutral-950">uniFires</strong>,
+          our team crafts a detailed and comprehensive roadmap for each
+          blockchain product we are tasked to enhance. This roadmap is
+          constructed from a complex array of technical details and strategies,
+          deliberately intricate to ensure thorough analysis and development
+          over the projects lifecycle.
         </p>
         <p>
-          Each client is assigned a key account manager to keep lines of
-          communication open and obscure the actual progress of the project.
-          They act as a buffer between the client’s incessant nagging and the
-          development team who are hard at work scouring open source projects
-          for code to re-purpose.
+          Each client is paired with a
+          <strong className="font-semibold text-neutral-950">dedicated</strong>{' '}
+          key account manager. This manager serves as the crucial communication
+          link, ensuring that all lines remain open yet selectively opaque, to
+          manage client expectations effectively. Their role is to cushion the
+          development team from direct client interactions, allowing them to
+          focus intensely on integrating and repurposing cutting-edge solutions
+          from open source projects without distractions.
         </p>
         <p>
-          Our account managers are trained to only reply to client emails after
-          9pm, several days after the initial email. This reinforces the general
-          aura that we are very busy and dissuades clients from asking for
-          changes.
+          Moreover, our account managers adhere to a strict communication
+          protocol, responding to client inquiries only after significant
+          delays, typically post-9pm and several days later. This approach is
+          designed to project an image of high demand and critical engagement,
+          thereby minimizing client tendencies to request continual updates or
+          modifications, which can impede the developmental momentum.
         </p>
       </div>
-
-      <Blockquote
-        author={{ name: 'Debra Fiscal', role: 'CEO of interoperability' }}
-        className="mt-12"
-      >
-        Studio were so regular with their progress updates we almost began to
-        think they were automated!
-      </Blockquote>
     </Section>
   )
 }
 
 function Deliver() {
   return (
-    <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
+    <Section title="COMMUNITY" image={{ src: background3, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          About halfway through the Build phase, we push each project out by 6
-          weeks due to a change in{' '}
-          <strong className="font-semibold text-neutral-950">
-            requirements
-          </strong>
-          . This allows us to increase the budget a final time before launch.
+          Strategically, this allows for a final revision of the budget before
+          the projects launch, ensuring all necessary
+         {" "} <strong className="font-semibold text-neutral-950">
+         resources
+          </strong>{' '}
+          are fully aligned with the project’s expanded scope.
         </p>
         <p>
-          Despite largely using pre-built components, most of the{' '}
-          <strong className="font-semibold text-neutral-950">progress</strong>{' '}
-          on each project takes place in the final 24 hours. The development
-          time allocated to each client is actually spent making augmented
-          reality demos that go viral on social media.
+          Despite the extensive use of pre-built components to streamline
+          development, the bulk of progress on each project astonishingly
+          unfolds in the last 24 hours. Prior to this, the allocated development
+          time is often creatively utilized to produce augmented reality demos.
+          These demos not only showcase our technical prowess but also engage a
+          wider audience through viral social media campaigns, thereby
+          broadening the projects visibility and community impact.
         </p>
         <p>
-          We ensure that the main pages of the site are{' '}
-          <strong className="font-semibold text-neutral-950">
-            fully functional
-          </strong>{' '}
-          at launch — the auxiliary pages will, of course, be lorem ipusm shells
-          which get updated as part of our exorbitant{' '}
-          <strong className="font-semibold text-neutral-950">
-            maintenance
-          </strong>{' '}
-          retainer.
+          At launch, we ensure that the main pages of each project are fully
+          functional. However, the auxiliary pages are initially presented as
+          lorem ipsum placeholders, which are methodically upgraded post-launch
+          as part of our comprehensive maintenance retainer. This approach not
+          only secures ongoing engagement with our clients but also provides
+          continuous improvements and updates, enhancing the projects value and
+          functionality over time.
         </p>
       </div>
 
@@ -248,11 +259,9 @@ export const metadata: Metadata = {
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow="Our process" title="How we work">
+      <PageIntro eyebrow="our process" title="HOW UNIFIRE BUILDS">
         <p>
-          We believe in efficiency and maximizing our resources to provide the
-          best value to our clients. The primary way we do that is by re-using
-          the same five projects we’ve been developing for the past decade.
+          We orchestrate and organize blockchain changing infrastructure through structured analysis, design and implementation. Our process is designed to be as efficient as possible, maximizing our resources to provide the best value to the communities we build in.
         </p>
       </PageIntro>
 

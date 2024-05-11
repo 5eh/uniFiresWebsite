@@ -134,11 +134,11 @@ function Navigation() {
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
         <NavigationItem href="/workgroups">WORKGROUPS</NavigationItem>
-        <NavigationItem href="/about">ECOSYSTEM</NavigationItem>
+        <NavigationItem href="/ecosystem">ECOSYSTEM</NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/process">PROCESS</NavigationItem>
-        <NavigationItem href="/blog">PURPOSE</NavigationItem>
+        <NavigationItem href="/purpoose">PURPOSE</NavigationItem>
       </NavigationRow>
     </nav>
   )
