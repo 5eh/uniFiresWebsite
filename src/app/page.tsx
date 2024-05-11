@@ -1,5 +1,5 @@
 import { type Metadata } from 'next'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
 import { ContactSection } from '@/components/ContactSection'
@@ -11,7 +11,8 @@ import PolkadotLogo from '@/images/clients/polkadot/PolkadotLogo.png'
 
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
-const clients = [
+type ClientLogoPair = [string, StaticImageData];
+const clients: ClientLogoPair[] = [
   ['Cardano', CardanoLogo],
   ['Polkadot', PolkadotLogo],
 ]
@@ -24,7 +25,7 @@ function Clients() {
         <FadeIn className="flex items-center gap-x-8">
           <div className="h-px flex-auto bg-neutral-800" />
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We're connecting the largest blockchain ecosystems together
+            We`&apos;`re connecting the largest blockchain ecosystems together
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>

@@ -41,6 +41,7 @@ export interface Article {
 export interface CaseStudy {
   date: string
   client: string
+  host: string
   title: string
   description: string
   summary: Array<string>
