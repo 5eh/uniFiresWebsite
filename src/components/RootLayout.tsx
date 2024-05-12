@@ -60,15 +60,19 @@ function Header({
   let { logoHovered, setLogoHovered } = useContext(RootLayoutContext)!
 
   return (
-    <Container>
-      <div className="flex items-center justify-between">
+    <Container className="pl-2 pr-2 md:pl-6 md:pr-6 lg:pl-12 lg:pr-12">
+      <div className="flex items-center justify-evenly sm:justify-between">
         <Link
           href="/"
           aria-label="Home"
           onMouseEnter={() => setLogoHovered(true)}
           onMouseLeave={() => setLogoHovered(false)}
         >
-          <Logo className="h-16 w-full" invert={invert} filled={logoHovered} />
+          <Logo
+            className="h-12 w-full sm:h-16"
+            invert={invert}
+            filled={logoHovered}
+          />
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="/google-calender" invert={invert}>
@@ -133,14 +137,14 @@ function NavigationItem({
 
 function Navigation() {
   return (
-    <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
+    <nav className="ld:text-5xl mt-px font-display text-2xl font-medium tracking-tight text-white sm:text-3xl md:text-4xl xl:text-6xl">
       <NavigationRow>
         <NavigationItem href="/workgroups">WORKGROUPS</NavigationItem>
         <NavigationItem href="/ecosystem">ECOSYSTEM</NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/process">PROCESS</NavigationItem>
-        <NavigationItem href="/purpoose">PURPOSE</NavigationItem>
+        <NavigationItem href="/purpose">PURPOSE</NavigationItem>
       </NavigationRow>
     </nav>
   )
@@ -175,7 +179,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <header>
         <div
-          className="absolute left-0 right-0 top-2 z-40 pt-14"
+          className="absolute left-0 right-0 top-2 z-40  pb-8 pt-8 sm:pb-16 sm:pt-14"
           aria-hidden={expanded ? 'true' : undefined}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? '' : undefined}
@@ -204,7 +208,10 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           inert={expanded ? undefined : ''}
         >
           <motion.div layout className="bg-neutral-800">
-            <div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
+            <div
+              ref={navRef}
+              className="bg-neutral-950 pb-8 pt-8 sm:pb-16 sm:pt-14"
+            >
               <Header
                 invert
                 panelId={panelId}
