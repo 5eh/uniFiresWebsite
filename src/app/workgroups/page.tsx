@@ -61,7 +61,7 @@ function CaseStudies({
                   </div>
                 </div>
                 <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
-                  <p className="font-display text-4xl font-medium text-neutral-950">
+                  <p className="font-display text-xl  font-medium text-neutral-950 sm:text-2xl md:text-3xl lg:text-4xl">
                     <Link href={caseStudy.href}>{caseStudy.title}</Link>
                   </p>
                   <div className="mt-6 space-y-6 text-base text-neutral-600">
@@ -110,12 +110,12 @@ function Clients() {
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          You’re in good company
+          Bridging the leading blockchains
         </h2>
       </FadeIn>
       <FadeInStagger className="mt-10" faster>
         <Border as={FadeIn} />
-        <ul
+        {/* <ul
           role="list"
           className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4"
         >
@@ -128,7 +128,7 @@ function Clients() {
               </FadeIn>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </FadeInStagger>
     </Container>
   )
@@ -150,15 +150,14 @@ export default async function Work() {
         title="Proven solutions for real-world problems."
       >
         <p>
-          We believe that by enabling public work groups, any blockchain can thrive without stress building user changing
+          We believe that by enabling public work groups, any blockchain can
+          thrive without stress building user changing
         </p>
       </PageIntro>
 
       <CaseStudies caseStudies={caseStudies} />
 
-
       <Clients />
-
 
       <ContactSection />
     </>
