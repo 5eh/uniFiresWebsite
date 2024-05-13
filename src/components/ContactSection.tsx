@@ -1,15 +1,11 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { Footprints, Offices } from '@/components/Offices'
+import { Footprints } from '@/components/Offices'
 
 export function ContactSection() {
   return (
-<<<<<<< HEAD
     <Container className="mb-24 mt-24 sm:mt-32 lg:mt-40">
-=======
-    <Container className="mb-12 mt-24 sm:mt-32 md:mb-8 lg:mb-12 lg:mt-40 xl:mb-20">
->>>>>>> 4912693f379c1a23391f86a77954c98035354a68
       <FadeIn className="-mx-6 rounded-4xl bg-neutral-950 px-6 py-20 sm:mx-0 sm:py-32 md:px-12">
         <div className="mx-auto max-w-4xl">
           <div className="max-w-xl">
