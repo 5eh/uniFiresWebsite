@@ -18,7 +18,7 @@ export function Container<T extends React.ElementType = 'div'>({
     <Component
       className={clsx(' mx-auto max-w-7xl px-6 pl-8 pr-8 lg:px-8', className)}
     >
-      <div className="pr-8 lg:max-w-none mx-auto  max-w-2xl">
+      <div className="mx-auto max-w-2xl pl-1 pr-1  lg:max-w-none">
         {children}
       </div>
     </Component>

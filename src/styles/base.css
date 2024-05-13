@@ -1,5 +1,9 @@
 @tailwind base;
 
+:root {
+  cursor: crosshair;
+}
+
 @font-face {
   font-family: 'Mona Sans';
   font-weight: 200 900;
@@ -10,6 +14,6 @@
 }
 
 ::selection {
-  background-color: #FE64A3;
+  background-color: #fe64a3;
   color: white;
-} 
+}

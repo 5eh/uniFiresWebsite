@@ -1,5 +1,5 @@
 import { type Metadata } from 'next'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import Link from 'next/link'
 
 import { ContactSection } from '@/components/ContactSection'
@@ -11,27 +11,37 @@ import PolkadotLogo from '@/images/clients/polkadot/PolkadotLogo.png'
 
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
-const clients = [
+type ClientLogoPair = [string, StaticImageData]
+const clients: ClientLogoPair[] = [
   ['Cardano', CardanoLogo],
   ['Polkadot', PolkadotLogo],
 ]
-
 
 function Clients() {
   return (
     <div className="ml-4 mr-4 mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
+<<<<<<< HEAD
           <div className="h-px flex-auto bg-neutral-800" />
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
             We&apos;re proud to be building in
+=======
+          <div className="h-px  min-w-6 flex-auto bg-white" />
+          <h2 className="justify-center p-0 text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
+            We&apos;re connecting the largest blockchain ecosystems together
+>>>>>>> 4912693f379c1a23391f86a77954c98035354a68
           </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
+          <div className="h-px min-w-6 flex-auto bg-white" />
         </FadeIn>
         <FadeInStagger faster>
           <ul
             role="list"
+<<<<<<< HEAD
             className="justify-center mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-2"
+=======
+            className="mt-10 grid grid-cols-1 justify-center gap-x-8 gap-y-10 lg:grid-cols-3"
+>>>>>>> 4912693f379c1a23391f86a77954c98035354a68
           >
             {clients.map(([client, logo]) => (
               <li key={client} className="flex items-center justify-center">
@@ -54,12 +64,10 @@ function CaseStudies({
 }) {
   return (
     <>
-      <SectionIntro
-        title="WORK GROUPS"
-        className="mt-24 sm:mt-32 lg:mt-40"
-      >
+      <SectionIntro title="WORK GROUPS" className="mt-24 sm:mt-32 lg:mt-40">
         <p>
-          We host work groups for leading developers in various blockchains to collaborate on ideas and share knowledge.
+          We host work groups for leading developers in various blockchains to
+          collaborate on ideas and share knowledge.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -90,7 +98,7 @@ function CaseStudies({
                   </span>
                   <span>Work Group</span>
                 </p>
-                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
+                <p className="mt-6 font-display  font-semibold text-neutral-950 sm:text-xl md:text-2xl lg:text-2xl">
                   {caseStudy.title}
                 </p>
                 <p className="mt-4 text-base text-neutral-600">
@@ -132,7 +140,7 @@ export default async function Home() {
 
       <CaseStudies caseStudies={caseStudies} />
 
-      <div className='mb-6 mt-6'>
+      <div className="mb-6 mt-6">
         <ContactSection />
       </div>
     </>

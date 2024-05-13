@@ -53,7 +53,7 @@ function CaseStudies({
                   </div>
                 </div>
                 <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
-                  <p className="font-display text-4xl font-medium text-neutral-950">
+                  <p className="font-display text-xl  font-medium text-neutral-950 sm:text-2xl md:text-3xl lg:text-4xl">
                     <Link href={caseStudy.href}>{caseStudy.title}</Link>
                   </p>
                   <div className="mt-6 space-y-6 text-base text-neutral-600">
@@ -86,7 +86,6 @@ function CaseStudies({
     </Container>
   )
 }
-
 export const metadata: Metadata = {
   title: 'Work groups',
   description:
