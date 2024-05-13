@@ -55,39 +55,40 @@ function Section({
 
 function Discover() {
   return (
-    <Section title="RESEARCH" image={{ src: background }}>
+    <Section title="ONBOARDING" image={{ src: background }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          At uniFires, the collaboration between Cardano and Polkadot extends
-          deeply into understanding the intricacies of blockchain technologies
-          and their application in the{' '}
-          <strong className="font-semibold text-neutral-950">real world</strong>{' '}
-          . Our Research workgroup immerses itself in the ecosystems of our
-          blockchain clients, analyzing their operations to ascertain the core
-          elements that drive their systems.
+          <strong className="font-semibold text-neutral-950">
+            Onboarding Participants:
+          </strong>{' '}
+          We initiate our collaboration by identifying and connecting with
+          ambassadors from strategically relevant blockchains, currently
+          focusing on Cardano and Polkadot. This selection is driven by their
+          potential to contribute to and lead future workgroups, emphasizing our
+          commitment to fostering a collaborative ecosystem.
         </p>
         <p>
-          This process involves our team of blockchain{' '}
-          <strong className="font-semibold text-neutral-950">experts</strong>{' '}
-          who act like private investigators, meticulously studying the work of
-          key developers and leaders within the blockchain space for extensive
-          periods. Our technical teams also engage in detailed analyses,
-          examining the architecture and infrastructure of various blockchain
-          systems, akin to going through every layer of data as if sifting
-          through trash, uncovering every hidden detail. Senior security
-          analysts employ advanced techniques, including social engineering
-          tactics, to test the robustness of security protocols, effectively
-          gaining insights into vulnerabilities and the effectiveness of smart
-          contract implementations.
+          <strong className="font-semibold text-neutral-950">
+            Building Background Knowledge:
+          </strong>{' '}
+          Each participant brings unique insights related to their
+          blockchain&aposs specific strengths. By helping deepen their
+          understanding between blockchains, we prepare them to lead and
+          specialize in areas of mutual interest. This foundational knowledge is
+          crucial as we aim to scale our outreach and impact by nurturing
+          skilled developers and visionary leaders.
         </p>
         <p>
-          After{' '}
-          <strong className="font-semibold text-neutral-950">thorough</strong>{' '}
-          research and audits, including smart contract reviews and security
-          assessments, we compile our findings into a comprehensive report. This
-          report not only outlines the technical and operational details but
-          also proposes a strategic plan and budget tailored to enhance system
-          interoperability and security within the blockchain framework.
+          <strong className="font-semibold text-neutral-950">
+            Formation of Cross-Chain Working Groups:
+          </strong>{' '}
+          Our structured approach in forming cross-chain working groups is based
+          on the technical skills and expertise of our participants. These
+          groups are tailored to focus on pivotal areas such as Web3 adoption,
+          decentralized governance, and cross-chain interoperability. Initially,
+          our efforts are concentrated in three main groups, each tasked with
+          driving research and analysis to advance these critical aspects of
+          blockchain technology.
         </p>
       </div>
 
@@ -95,12 +96,12 @@ function Discover() {
         Included in this phase
       </h3>
       <TagList className="mt-4">
-        <TagListItem>Blockchain relevancy</TagListItem>
-        <TagListItem>Developers and key drivers</TagListItem>
+        <TagListItem>Onboarding</TagListItem>
+        <TagListItem>Relevancy</TagListItem>
         <TagListItem>System architecture</TagListItem>
         <TagListItem>Blockchain infrastructure</TagListItem>
-        <TagListItem>Hacks and proofs</TagListItem>
-        <TagListItem>Smart contract audits</TagListItem>
+        <TagListItem>Formation</TagListItem>
+        <TagListItem>Ambassadors</TagListItem>
       </TagList>
     </Section>
   )
@@ -108,87 +109,113 @@ function Discover() {
 
 function Build() {
   return (
-    <Section title="BUIDL" image={{ src: background2, shape: 1 }}>
+    <Section title="KNOWLEDGE SYNTHESIS" image={{ src: background2, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Following the discovery phase at{' '}
-          <strong className="font-semibold text-neutral-950">uniFires</strong>,
-          our team crafts a detailed and comprehensive roadmap for each
-          blockchain product we are tasked to enhance. This roadmap is
-          constructed from a complex array of technical details and strategies,
-          deliberately intricate to ensure thorough analysis and development
-          over the projects lifecycle.
+          <strong className="font-semibold text-neutral-950">
+            Self-Organization:
+          </strong>{' '}
+          We facilitate the formation of self-organizing groups, drawing from
+          the unique expertise and interests of each participant. With guidance
+          from experienced ambassadors, these groups are primed for deep dives
+          into knowledge sharing, enhancing cross-chain research and
+          experimentation. This process not only fosters innovation but also
+          ensures that insights are grounded in practical expertise from across
+          the blockchain spectrum.
         </p>
         <p>
-          Each client is paired with a
-          <strong className="font-semibold text-neutral-950">dedicated</strong>{' '}
-          key account manager. This manager serves as the crucial communication
-          link, ensuring that all lines remain open yet selectively opaque, to
-          manage client expectations effectively. Their role is to cushion the
-          development team from direct client interactions, allowing them to
-          focus intensely on integrating and repurposing cutting-edge solutions
-          from open source projects without distractions.
+          <strong className="font-semibold text-neutral-950">
+            Synthesizing Findings:
+          </strong>{' '}
+          Each member of our self-organized work groups enjoys the freedom to
+          explore and discuss the various facets of blockchain
+          infrastructure—its capabilities, limitations, and governance models.
+          Our initial focus is on creating a robust framework for integrating
+          diverse ideas in a cohesive manner, setting a standard for future
+          discussions and innovations.
         </p>
         <p>
-          Moreover, our account managers adhere to a strict communication
-          protocol, responding to client inquiries only after significant
-          delays, typically post-9pm and several days later. This approach is
-          designed to project an image of high demand and critical engagement,
-          thereby minimizing client tendencies to request continual updates or
-          modifications, which can impede the developmental momentum.
+          <strong className="font-semibold text-neutral-950">
+            Report Creation:
+          </strong>{' '}
+          The culmination of our collaborative efforts is the creation of
+          detailed reports by each work group. These documents are crafted under
+          the stewardship of the group's host, incorporating collective findings
+          and insights. Before being shared publicly, each report undergoes
+          thorough revision to ensure accuracy and relevance, effectively
+          capturing the advancements made through our joint endeavors.
         </p>
       </div>
+      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+        Included in this phase
+      </h3>
+      <TagList className="mt-4">
+        <TagListItem>Collaboration</TagListItem>
+        <TagListItem>Self hosting work groups</TagListItem>
+        <TagListItem>Architecture curation</TagListItem>
+        <TagListItem>Frequent calls</TagListItem>
+        <TagListItem>Report creation</TagListItem>
+        <TagListItem>Knowledge synthesis</TagListItem>
+      </TagList>
     </Section>
   )
 }
 
 function Deliver() {
   return (
-    <Section title="COMMUNITY" image={{ src: background2, shape: 2 }}>
+    <Section title="DISSEMINATION" image={{ src: background2, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Strategically, this allows for a final revision of the budget before
-          the projects launch, ensuring all necessary{' '}
-          <strong className="font-semibold text-neutral-950">resources</strong>{' '}
-          are fully aligned with the project’s expanded scope.
+          <strong className="font-semibold text-neutral-950">
+            Result Dissemination:
+          </strong>{' '}
+          Upon finalization, the report is distributed throughout Cardano and
+          Polkadot, ensuring all participants have access to the insights
+          garnered. The findings are publicized through a variety of formats
+          including articles, blogs, and videos to reach a broader audience.
         </p>
         <p>
-          Despite the extensive use of pre-built components to streamline
-          development, the bulk of progress on each project astonishingly
-          unfolds in the last 24 hours. Prior to this, the allocated development
-          time is often creatively utilized to produce augmented reality demos.
-          These demos not only showcase our technical prowess but also engage a
-          wider audience through viral social media campaigns, thereby
-          broadening the projects visibility and community impact.
+          <strong className="font-semibold text-neutral-950">
+            Ecosystems Engagement:
+          </strong>{' '}
+          With the publication of these articles, the synthesized knowledge
+          becomes accessible to both ecosystems. Ambassadors play a key role
+          distributing its content in a top to bottom stream.
         </p>
         <p>
-          At launch, we ensure that the main pages of each project are fully
-          functional. However, the auxiliary pages are initially presented as
-          lorem ipsum placeholders, which are methodically upgraded post-launch
-          as part of our comprehensive maintenance retainer. This approach not
-          only secures ongoing engagement with our clients but also provides
-          continuous improvements and updates, enhancing the projects value and
-          functionality over time.
+          <strong className="font-semibold text-neutral-950">
+            Wider Reach:
+          </strong>{' '}
+          The initial dissemination seeds the ground for further exposure. As
+          developers begin to implement insights from the reports, content is
+          adapted into various media forms—enhancing accessibility and
+          engagement. This strategy extends the reach of our findings beyond
+          traditional blockchain communities to include influencers, content
+          creators, and industry thought leaders, thereby amplifying the impact
+          and visibility of both uniFires and the participating blockchain
+          ecosystems.
+        </p>
+        <p>
+          <strong className="font-semibold text-neutral-950">
+            Fostering Collaboration:
+          </strong>{' '}
+          This work isn’t yet completed, future media sharing, revisional work
+          and improvement is still necessary to empower blockchains at uniFires.
+          However, this is now accessible and capable of detribalizing
+          blockchains for its great social change.
         </p>
       </div>
-
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
         Included in this phase
       </h3>
-      <List className="mt-8">
-        <ListItem title="Testing">
-          Our projects always have 100% test coverage, which would be impressive
-          if our tests weren’t as porous as a sieve.
-        </ListItem>
-        <ListItem title="Infrastructure">
-          To ensure reliability we only use the best Digital Ocean droplets that
-          $4 a month can buy.
-        </ListItem>
-        <ListItem title="Support">
-          Because we hold the API keys for every critical service your business
-          uses, you can expect a lifetime of support, and invoices, from us.
-        </ListItem>
-      </List>
+      <TagList className="mt-4">
+        <TagListItem>Publication</TagListItem>
+        <TagListItem>Dissemination</TagListItem>
+        <TagListItem>Community engagement</TagListItem>
+        <TagListItem>Wider reach</TagListItem>
+        <TagListItem>Developent curation </TagListItem>
+        <TagListItem>Collaboration</TagListItem>
+      </TagList>
     </Section>
   )
 }
@@ -257,12 +284,12 @@ export const metadata: Metadata = {
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow="our process" title="HOW UNIFIRE BUILDS">
+      <PageIntro eyebrow="our process" title="HOW UNIFIRE CREATES">
         <p>
-          We orchestrate and organize blockchain changing infrastructure through
-          structured analysis, design and implementation. Our process is
-          designed to be as efficient as possible, maximizing our resources to
-          provide the best value to the communities we build in.
+          We’ve created and facilitated a process to onboard groups of well
+          positioned ambassadors between various blockchains. Through our
+          process, we enhance access to premium knowledge to dig deeper into
+          mutual areas of interest in blockchain infrastructure.
         </p>
       </PageIntro>
 
