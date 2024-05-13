@@ -220,7 +220,7 @@ function Deliver() {
   )
 }
 
-function Values() {
+function FutureGroups() {
   return (
     <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
       <div className="bg-red-30 absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
@@ -231,43 +231,41 @@ function Values() {
       </div>
 
       <SectionIntro
-        eyebrow="Our values"
-        title="Balancing reliability and innovation"
+        eyebrow="sample work group"
+        title="WEB3 ADOPTION WORK GROUP BEST PRACTICES"
       >
         <p>
-          We strive to stay at the forefront of emerging trends and
-          technologies, while completely ignoring them and forking that old
-          Rails project we feel comfortable using. We stand by our core values
-          to justify that decision.
+          These are just some of the topics that could be discussed in this
+          working group.
         </p>
       </SectionIntro>
 
-      <Container className="mt-24">
+      <Container className="mt-8">
         <GridList>
-          <GridListItem title="Meticulous">
-            The first part of any partnership is getting our designer to put
-            your logo in our template. The second step is getting them to do the
-            colors.
+          <GridListItem title="Decreasing Time to Market">
+            Curating and formalizing a group of projects that reduce the time
+            for ideas to be brought to market. This group would optimize
+            development speed for effective project creations.
           </GridListItem>
-          <GridListItem title="Efficient">
-            We pride ourselves on never missing a deadline which is easy because
-            most of the work was done years ago.
+          <GridListItem title="Future Economy">
+            Organizing and structuring future economic work groups that focus on
+            the development of DeFi and NFTs on Cardano and Polkadot.
           </GridListItem>
-          <GridListItem title="Adaptable">
-            Every business has unique needs and our greatest challenge is
-            shoe-horning those needs into something we already built.
+          <GridListItem title="Corporate Partnership">
+            Structuring methods for building corporate partnerships that enhance
+            the Cardano and Polkadot ecosystems through the implementation of
+            blockchain technology for consumer use.
           </GridListItem>
-          <GridListItem title="Honest">
-            We are transparent about all of our processes, banking on the simple
-            fact our clients never actually read anything.
+          <GridListItem title="RealFi">
+            Expanding on projects like World Mobile Token and Empowa on Cardano
+            that are making significant real-world impacts in connectivity and
+            housing, respectively.
           </GridListItem>
-          <GridListItem title="Loyal">
-            We foster long-term relationships with our clients that go beyond
-            just delivering a product, allowing us to invoice them for decades.
-          </GridListItem>
-          <GridListItem title="Innovative">
-            The technological landscape is always evolving and so are we. We are
-            constantly on the lookout for new open source projects to clone.
+          <GridListItem title="Other Work Groups">
+            Showcasing Cardano&apos;s contributions to Web3 through initiatives
+            in credential verification, anti-counterfeiting, supply chain
+            tracking, and identity verification with projects like Book.io,
+            Cornucopias, NMKR, Clarity, Muesliswap, and Indigo.
           </GridListItem>
         </GridList>
       </Container>
@@ -299,7 +297,7 @@ export default function Process() {
         <Deliver />
       </div>
 
-      <Values />
+      <FutureGroups />
 
       <ContactSection />
     </>
