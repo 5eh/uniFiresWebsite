@@ -17,8 +17,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { GridPattern } from '@/components/GridPattern'
 import { Logo } from '@/components/Logo'
-import { Footprints, Offices } from '@/components/Footprints'
-import { SocialMedia } from '@/components/SocialMedia'
+import { Footprints } from '@/components/Footprints'
 
 const RootLayoutContext = createContext<{
   logoHovered: boolean
