@@ -140,7 +140,7 @@ function Build() {
           </strong>{' '}
           The culmination of our collaborative efforts is the creation of
           detailed reports by each work group. These documents are crafted under
-          the stewardship of the group's host, incorporating collective findings
+          the stewardship of the group&apos;s host, incorporating collective findings
           and insights. Before being shared publicly, each report undergoes
           thorough revision to ensure accuracy and relevance, effectively
           capturing the advancements made through our joint endeavors.
