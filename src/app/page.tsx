@@ -9,7 +9,7 @@ import { SectionIntro } from '@/components/SectionIntro'
 import CardanoLogo from '@/images/clients/cardano/CardanoLogo.png'
 import PolkadotLogo from '@/images/clients/polkadot/PolkadotLogo.png'
 
-import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import { type WorkGroup, type MDXEntry, loadWorkGroups } from '@/lib/mdx'
 
 type ClientLogoPair = [string, StaticImageData]
 const clients: ClientLogoPair[] = [
@@ -31,7 +31,7 @@ function Clients() {
         <FadeInStagger faster>
           <ul
             role="list"
-            className="justify-center mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-2"
+            className="mt-10 grid grid-cols-2 justify-center gap-x-8 gap-y-10 lg:grid-cols-2"
           >
             {clients.map(([client, logo]) => (
               <li key={client} className="flex items-center justify-center">
@@ -47,10 +47,10 @@ function Clients() {
   )
 }
 
-function CaseStudies({
-  caseStudies,
+function WorkGroups({
+  workGroups,
 }: {
-  caseStudies: Array<MDXEntry<CaseStudy>>
+  workGroups: Array<MDXEntry<WorkGroup>>
 }) {
   return (
     <>
@@ -62,15 +62,15 @@ function CaseStudies({
       </SectionIntro>
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {caseStudies.map((caseStudy) => (
-            <FadeIn key={caseStudy.href} className="flex">
+          {workGroups.map((workGroup) => (
+            <FadeIn key={workGroup.href} className="flex">
               <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
                 <h3>
-                  <Link href={caseStudy.href}>
+                  <Link href={workGroup.href}>
                     <span className="absolute inset-0 rounded-3xl" />
                     <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
+                      src={workGroup.logo}
+                      alt={workGroup.client}
                       className="h-16 w-16"
                       unoptimized
                     />
@@ -78,10 +78,10 @@ function CaseStudies({
                 </h3>
                 <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
                   <time
-                    dateTime={caseStudy.date.split('-')[0]}
+                    dateTime={workGroup.date.split('-')[0]}
                     className="font-semibold"
                   >
-                    {caseStudy.date.split('-')[0]}
+                    {workGroup.date.split('-')[0]}
                   </time>
                   <span className="text-neutral-300" aria-hidden="true">
                     /
@@ -89,10 +89,10 @@ function CaseStudies({
                   <span>Work Group</span>
                 </p>
                 <p className="mt-6 font-display  font-semibold text-neutral-950 sm:text-xl md:text-2xl lg:text-2xl">
-                  {caseStudy.title}
+                  {workGroup.title}
                 </p>
                 <p className="mt-4 text-base text-neutral-600">
-                  {caseStudy.description}
+                  {workGroup.description}
                 </p>
               </article>
             </FadeIn>
@@ -109,7 +109,7 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
-  let caseStudies = (await loadCaseStudies()).slice(0, 3)
+  let workGroups = (await loadWorkGroups()).slice(0, 3)
 
   return (
     <>
@@ -128,7 +128,7 @@ export default async function Home() {
 
       <Clients />
 
-      <CaseStudies caseStudies={caseStudies} />
+      <WorkGroups workGroups={workGroups} />
 
       <div className="mb-6 mt-6">
         <ContactSection />

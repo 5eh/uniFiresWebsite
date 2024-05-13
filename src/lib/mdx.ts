@@ -38,7 +38,7 @@ export interface Article {
   }
 }
 
-export interface CaseStudy {
+export interface WorkGroup {
   date: string
   client: string
   host: string
@@ -61,6 +61,6 @@ export function loadArticles() {
   return loadEntries<Article>('blog', 'article')
 }
 
-export function loadCaseStudies() {
-  return loadEntries<CaseStudy>('workgroups', 'caseStudy')
+export function loadWorkGroups() {
+  return loadEntries<WorkGroup>('workgroups', 'workGroup')
 }
