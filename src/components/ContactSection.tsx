@@ -1,11 +1,11 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { Offices } from '@/components/Offices'
+import { Footprints, Offices } from '@/components/Offices'
 
 export function ContactSection() {
   return (
-    <Container className="mt-24 sm:mt-32 mb-24 lg:mt-40">
+    <Container className="mb-24 mt-24 sm:mt-32 lg:mt-40">
       <FadeIn className="-mx-6 rounded-4xl bg-neutral-950 px-6 py-20 sm:mx-0 sm:py-32 md:px-12">
         <div className="mx-auto max-w-4xl">
           <div className="max-w-xl">
@@ -21,7 +21,7 @@ export function ContactSection() {
               <h3 className="font-display text-base font-semibold text-white">
                 FOOTPRINT
               </h3>
-              <Offices
+              <Footprints
                 invert
                 className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
               />

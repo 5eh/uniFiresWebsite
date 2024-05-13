@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-function Office({
+function Footprint({
   name,
   children,
   invert = false,
@@ -25,35 +25,53 @@ function Office({
   )
 }
 
-export function Offices({
+export function Footprints({
   invert = false,
   ...props
 }: React.ComponentPropsWithoutRef<'ul'> & { invert?: boolean }) {
   return (
     <ul role="list" {...props}>
       <li>
-        <Office name="Discord" invert={invert}>
-          <a href="https://discord.gg/nextjs" className="link">
-            discord.gg/inviteLink
+        <Footprint name="Discord" invert={invert}>
+          <a href="https://discord.gg/SYMREsnSwQ" className="link">
+            Discord Public Server
           </a>
-        </Office>
+        </Footprint>
       </li>
       <li>
-        <Office name="Github" invert={invert}>
+        <Footprint name="Github" invert={invert}>
           <a href="https://github.com/uniFirez" className="link">
-            github.com/uniFirez
+            Public Repository
           </a>
-        </Office>
+        </Footprint>
       </li>
       <li>
-        <Office name="LIDO Nation" invert={invert}>
+        <Footprint name="Twitter" invert={invert}>
+          <a href="https://twitter.com/uni_fires" className="link">
+            Twitter Account
+          </a>
+        </Footprint>
+      </li>
+      <li>
+        <Footprint name="Calendar" invert={invert}>
           <a
-            href="https://www.lidonation.com/en/proposals/polkadot-cardano-unifires-f11"
+            href="https://calendar.google.com/calendar/u/0?cid=dW5pLmZpcmVzc3NAZ21haWwuY29t"
             className="link"
           >
-            LIDO Nation
+            Google Calender
           </a>
-        </Office>
+        </Footprint>
+      </li>
+      <li>
+        <Footprint name="Youtube" invert={invert}>
+          <a
+            href="https://www.youtube.com/channel/UC6EAMUQSNzjxp_F-HbvMmdQ
+s"
+            className="link"
+          >
+            Youtube Channel
+          </a>
+        </Footprint>
       </li>
     </ul>
   )

@@ -17,7 +17,7 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { GridPattern } from '@/components/GridPattern'
 import { Logo } from '@/components/Logo'
-import { Offices } from '@/components/Offices'
+import { Footprints, Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
 
 const RootLayoutContext = createContext<{
@@ -225,7 +225,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
                     <h2 className="font-display text-base font-semibold text-white">
                       Our offices
                     </h2>
-                    <Offices
+                    <Footprints
                       invert
                       className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
                     />
