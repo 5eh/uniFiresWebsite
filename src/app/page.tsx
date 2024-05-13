@@ -24,14 +24,14 @@ function Clients() {
         <FadeIn className="flex items-center gap-x-8">
           <div className="h-px flex-auto bg-neutral-800" />
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We're connecting the largest blockchain ecosystems together
+            We&apos;re proud to be building in
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
         <FadeInStagger faster>
           <ul
             role="list"
-            className="justify-center mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-3"
+            className="justify-center mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-2"
           >
             {clients.map(([client, logo]) => (
               <li key={client} className="flex items-center justify-center">

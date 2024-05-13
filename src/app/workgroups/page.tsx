@@ -7,16 +7,8 @@ import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
-import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
-import logoFamilyFund from '@/images/clients/interoperability/logo-dark.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
-import logoPhobia from '@/images/clients/adoption/logo-dark.svg'
-import logoUnseal from '@/images/clients/interoperability/logo-dark.svg'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
@@ -29,7 +21,7 @@ function CaseStudies({
     <Container className="mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          WORK GROUP
+          THE WORK GROUPS
         </h2>
       </FadeIn>
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
@@ -95,45 +87,6 @@ function CaseStudies({
   )
 }
 
-const clients = [
-  ['Phobia', logoPhobia],
-  ['Family Fund', logoFamilyFund],
-  ['interoperability', logoUnseal],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
-]
-
-function Clients() {
-  return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
-      <FadeIn>
-        <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          You’re in good company
-        </h2>
-      </FadeIn>
-      <FadeInStagger className="mt-10" faster>
-        <Border as={FadeIn} />
-        <ul
-          role="list"
-          className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4"
-        >
-          {clients.map(([client, logo]) => (
-            <li key={client} className="group">
-              <FadeIn className="overflow-hidden">
-                <Border className="pt-12 group-[&:nth-child(-n+2)]:-mt-px sm:group-[&:nth-child(3)]:-mt-px lg:group-[&:nth-child(4)]:-mt-px">
-                  <Image src={logo} alt={client} unoptimized />
-                </Border>
-              </FadeIn>
-            </li>
-          ))}
-        </ul>
-      </FadeInStagger>
-    </Container>
-  )
-}
-
 export const metadata: Metadata = {
   title: 'Work groups',
   description:
@@ -147,18 +100,14 @@ export default async function Work() {
     <>
       <PageIntro
         eyebrow="uniFires work groups"
-        title="Proven solutions for real-world problems."
+        title="Eliminating tribalism in blockchains."
       >
         <p>
-          We believe that by enabling public work groups, any blockchain can thrive without stress building user changing
+          Our work groups are a place for leading developers in various blockchains to collaborate on ideas and share knowledge. We host 3 unique groups that tackle pressing issues between Cardano and Polkadot.
         </p>
       </PageIntro>
 
       <CaseStudies caseStudies={caseStudies} />
-
-
-      <Clients />
-
 
       <ContactSection />
     </>
