@@ -75,12 +75,30 @@ function ContactForm() {
           <TextInput label="Message" name="message" />
           <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
             <fieldset>
-              <legend className="text-base/6 text-neutral-500">Budget</legend>
+              <legend className="text-base/6 text-neutral-500">
+                Blockchain
+              </legend>
               <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label="$25K – $50K" name="budget" value="25" />
-                <RadioInput label="$50K – $100K" name="budget" value="50" />
-                <RadioInput label="$100K – $150K" name="budget" value="100" />
-                <RadioInput label="More than $150K" name="budget" value="150" />
+                <RadioInput label="Cardano" name="blockchain" value="cardano" />
+                <RadioInput
+                  label="Polkadot"
+                  name="blockchain"
+                  value="polkadot"
+                />
+                <RadioInput
+                  label="Ethereum"
+                  name="blockchain"
+                  value="ethereum"
+                />
+                <RadioInput
+                  label="Bitcoin sidechain"
+                  name="blockchain"
+                  value="bitcoin"
+                />
+                <RadioInput label="Layer 1" name="blockchain" value="layer1" />
+                <RadioInput label="Layer 2" name="blockchain" value="layer2" />
+                <RadioInput label="Layer 3" name="blockchain" value="layer3" />
+                <RadioInput label="Other" name="blockchain" value="other" />
               </div>
             </fieldset>
           </div>

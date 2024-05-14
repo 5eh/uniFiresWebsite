@@ -74,7 +74,12 @@ function Header({
           />
         </Link>
         <div className="flex items-center gap-x-8">
-          <Button href="/google-calender" invert={invert}>
+          <Button
+            className="cursor-crosshair"
+            href="https://calendar.google.com/calendar/u/0?cid=dW5pLmZpcmVzc3NAZ21haWwuY29t"
+            target="_blank"
+            invert={invert}
+          >
             JOIN A WORKSHOP
           </Button>
           <button
@@ -126,10 +131,10 @@ function NavigationItem({
   return (
     <Link
       href={href}
-      className="group relative isolate -mx-6 bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16  sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
+      className="group relative isolate -mx-6 cursor-crosshair bg-neutral-950 px-6 py-10 even:mt-px sm:mx-0 sm:px-0 sm:py-16  sm:even:mt-0 sm:even:border-l sm:even:border-neutral-800 sm:even:pl-16"
     >
       {children}
-      <span className="absolute inset-y-0 -z-10 w-screen bg-gradient-to-r from-red-900/20 to-blue-900/20 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
+      <span className="absolute inset-y-0 -z-10 w-screen cursor-crosshair bg-gradient-to-r from-red-900/20 to-blue-900/20 opacity-0 transition group-odd:right-0 group-even:left-0 group-hover:opacity-100" />
     </Link>
   )
 }

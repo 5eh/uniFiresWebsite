@@ -5,26 +5,26 @@ import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
 import { MDXComponents } from '@/components/MDXComponents'
 import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
-import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import { type WorkGroup, type MDXEntry, loadWorkGroups } from '@/lib/mdx'
 
-export default async function CaseStudyLayout({
-  caseStudy,
+export default async function WorkGroupLayout({
+  workGroup,
   children,
 }: {
-  caseStudy: MDXEntry<CaseStudy>
+  workGroup: MDXEntry<WorkGroup>
   children: React.ReactNode
 }) {
-  let allCaseStudies = await loadCaseStudies()
-  let moreWorkGroups = allCaseStudies
-    .filter(({ metadata }) => metadata !== caseStudy)
+  let allWorkGroups = await loadWorkGroups()
+  let moreWorkGroups = allWorkGroups
+    .filter(({ metadata }) => metadata !== workGroup)
     .slice(0, 2)
 
   return (
     <>
       <article className="mt-24 sm:mt-32 lg:mt-40">
         <header>
-          <PageIntro eyebrow="work group" title={caseStudy.title} centered>
-            <p>{caseStudy.description}</p>
+          <PageIntro eyebrow="work group" title={workGroup.title} centered>
+            <p>{workGroup.description}</p>
           </PageIntro>
 
           <FadeIn>
@@ -33,20 +33,20 @@ export default async function CaseStudyLayout({
                 <div className="mx-auto max-w-5xl">
                   <dl className="-mx-6 grid grid-cols-1 text-sm text-neutral-950 sm:mx-0 sm:grid-cols-3">
                     <div className="border-t border-neutral-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0">
-                      <dt className="font-semibold">Organizer</dt>
-                      <dd>{caseStudy.host}</dd>
+                      <dt className="font-semibold">Host</dt>
+                      <dd>{workGroup.host}</dd>
                     </div>
                     <div className="border-t border-neutral-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0">
                       <dt className="font-semibold">Year</dt>
                       <dd>
-                        <time dateTime={caseStudy.date.split('-')[0]}>
-                          {caseStudy.date.split('-')[0]}
+                        <time dateTime={workGroup.date.split('-')[0]}>
+                          {workGroup.date.split('-')[0]}
                         </time>
                       </dd>
                     </div>
                     <div className="border-t border-neutral-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0">
                       <dt className="font-semibold">Service</dt>
-                      <dd>{caseStudy.service}</dd>
+                      <dd>{workGroup.service}</dd>
                     </div>
                   </dl>
                 </div>
@@ -56,7 +56,7 @@ export default async function CaseStudyLayout({
             <div className="border-y border-neutral-200 bg-neutral-100">
               <div className="-my-px mx-auto max-w-[76rem] bg-neutral-200">
                 <GrayscaleTransitionImage
-                  {...caseStudy.image}
+                  {...workGroup.image}
                   quality={90}
                   className="w-full"
                   sizes="(min-width: 1216px) 76rem, 100vw"
