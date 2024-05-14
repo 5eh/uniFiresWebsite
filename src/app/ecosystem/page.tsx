@@ -58,7 +58,7 @@ function Culture() {
 
 const team = [
   {
-    title: 'Leadership',
+    title: 'CARDANO',
     people: [
       {
         name: 'Leslie Alexander',
@@ -78,7 +78,7 @@ const team = [
     ],
   },
   {
-    title: 'Team',
+    title: 'POLKADOT',
     people: [
       {
         name: 'Chelsea Hagon',
@@ -95,35 +95,45 @@ const team = [
         role: 'VP, User Experience',
         image: { src: imageLeonardKrasner },
       },
+    ],
+  },
+  {
+    title: 'CREATORS',
+    people: [
       {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
-        image: { src: imageBlakeReid },
-      },
-      {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
-      },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
+        name: 'Chelsea Hagon',
         role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
+        image: { src: imageChelseaHagon },
       },
       {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
+        name: 'Emma Dorsey',
+        role: 'Senior Designer',
+        image: { src: imageEmmaDorsey },
+      },
+      {
+        name: 'Leonard Krasner',
+        role: 'VP, User Experience',
+        image: { src: imageLeonardKrasner },
+      },
+    ],
+  },
+  {
+    title: 'EXTRA CREDIT',
+    people: [
+      {
+        name: 'Chelsea Hagon',
+        role: 'Senior Developer',
+        image: { src: imageChelseaHagon },
+      },
+      {
+        name: 'Emma Dorsey',
+        role: 'Senior Designer',
+        image: { src: imageEmmaDorsey },
+      },
+      {
+        name: 'Leonard Krasner',
+        role: 'VP, User Experience',
+        image: { src: imageLeonardKrasner },
       },
     ],
   },
