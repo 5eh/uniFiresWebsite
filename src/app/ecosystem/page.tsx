@@ -11,6 +11,16 @@ import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StatList, StatListItem } from '@/components/StatList'
 import imageFiller from '@/images/background.png'
+import DumplingHead from '@/images/team/DumplingHead.png'
+import FrankHead from '@/images/team/FrankHead.png'
+import FelixHead from '@/images/team/FelixHead.png'
+import LuuuHead from '@/images/team/LuuuHead.png'
+import VikHead from '@/images/team/VikHead.png'
+import TomiHead from '@/images/team/TomiHead.png'
+import MarkHead from '@/images/team/MarkHead.png'
+import PeteHead from '@/images/team/PeteHead.png'
+import PeterHead from '@/images/team/PeterHead.png'
+
 import { loadArticles } from '@/lib/mdx'
 
 function Culture() {
@@ -56,22 +66,27 @@ const team = [
       {
         name: 'Peter Wolcott',
         role: 'Project Catalyst',
-        image: { src: imageFiller },
+        image: { src: PeteHead },
       },
       {
         name: 'Felix Weber',
         role: 'Cardano Ambassador',
-        image: { src: imageFiller },
+        image: { src: FelixHead },
       },
       {
         name: 'Dumpling',
         role: 'Cardano Teacher',
-        image: { src: imageFiller },
+        image: { src: DumplingHead },
       },
       {
         name: 'Peter Bui',
         role: 'Learn Cardano Podcast',
-        image: { src: imageFiller },
+        image: { src: PeterHead },
+      },
+      {
+        name: 'Mark Petruska',
+        role: 'Learn Cardano Podcast',
+        image: { src: MarkHead },
       },
     ],
   },
@@ -83,22 +98,22 @@ const team = [
       {
         name: 'Tomi Astikainen',
         role: 'Polkadot Ambassador',
-        image: { src: imageFiller },
+        image: { src: TomiHead },
       },
       {
         name: 'Frank Bevr',
         role: 'Polkadot Ambassador',
-        image: { src: imageFiller },
+        image: { src: FrankHead },
       },
       {
         name: 'Just Luuu',
         role: 'Polkadot Ambassador',
-        image: { src: imageFiller },
+        image: { src: LuuuHead },
       },
       {
         name: 'Viktor Venczel',
         role: 'Polkadot Ambassador',
-        image: { src: imageFiller },
+        image: { src: VikHead },
       },
     ],
   },
@@ -126,7 +141,7 @@ function Team() {
                     <li key={person.name}>
                       <FadeIn>
                         <div
-                          className="group relative overflow-hidden rounded-3xl bg-neutral-100"
+                          className="group relative overflow-hidden rounded-3xl bg-neutral-100 grayscale filter transition duration-500 ease-in-out hover:grayscale-0"
                           style={{
                             backgroundImage: `linear-gradient(${group.borderTop}, ${group.borderBottom})`,
                             border: '2px solid transparent',
@@ -135,7 +150,7 @@ function Team() {
                           <Image
                             alt=""
                             {...person.image}
-                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
+                            className="h-96 w-full object-cover transition duration-500  motion-safe:group-hover:scale-105"
                           />
                           <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
                             <p className="font-display text-base/6 font-semibold tracking-wide text-white">
