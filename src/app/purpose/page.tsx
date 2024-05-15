@@ -22,10 +22,11 @@ export default async function Blog() {
 
   return (
     <>
-      <PageIntro eyebrow="Blog" title="The latest articles and news">
+      <PageIntro eyebrow="uniFires purpose" title="Our movement">
         <p>
-          Stay up-to-date with the latest industry news as our marketing teams
-          finds new ways to re-purpose old CSS tricks articles.
+          We have built an internation group of developers creating an alliance
+          between Cardano and Polkadot through various work groups. You should
+          join.
         </p>
       </PageIntro>
 
