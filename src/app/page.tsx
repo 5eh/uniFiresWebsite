@@ -24,7 +24,7 @@ function Clients() {
         <FadeIn className="flex items-center gap-x-8">
           <div className="h-px flex-auto bg-white" />
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We&apos;re proud to be building in
+            Bringing together Web3 communities
           </h2>
           <div className="h-px min-w-6 flex-auto bg-white" />
         </FadeIn>
@@ -105,7 +105,7 @@ function WorkGroups({
 
 export const metadata: Metadata = {
   description:
-    'uniFires is an open network committed to helping engaged builders from different blockchain ecosytems. Sharing resources, knowledge and ideas to help build a thriving blockchain enabled future.',
+    'uniFires is an open network committed to helping engaged builders from different blockchain ecosystems. Sharing resources, knowledge and ideas to help build a thriving blockchain enabled future.',
 }
 
 export default async function Home() {
@@ -120,7 +120,7 @@ export default async function Home() {
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
             uniFires is an open network committed to helping engaged builders
-            from different blockchain ecosytems. Sharing resources, knowledge
+            from different blockchain ecosystems. Sharing resources, knowledge
             and ideas to help build a thriving blockchain enabled future.
           </p>
         </FadeIn>
