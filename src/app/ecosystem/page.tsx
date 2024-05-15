@@ -10,48 +10,39 @@ import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StatList, StatListItem } from '@/components/StatList'
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
-import imageBlakeReid from '@/images/team/blake-reid.jpg'
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
-import imageDriesVincent from '@/images/team/dries-vincent.jpg'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
-import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg'
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
-import imageMichaelFoster from '@/images/team/michael-foster.jpg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
+import imageFiller from '@/images/background.png'
 import { loadArticles } from '@/lib/mdx'
 
 function Culture() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
-      <SectionIntro
-        eyebrow="Our culture"
-        title="Balance your passion with your passion for life."
-        invert
-      >
-        <p>
-          We are a group of like-minded people who share the same core values.
-        </p>
-      </SectionIntro>
-      <Container className="mt-16">
-        <GridList>
-          <GridListItem title="Loyalty" invert>
-            Our team has been with us since the beginning because none of them
-            are allowed to have LinkedIn profiles.
-          </GridListItem>
-          <GridListItem title="Trust" invert>
-            We don’t care when our team works just as long as they are working
-            every waking second.
-          </GridListItem>
-          <GridListItem title="Compassion" invert>
-            You never know what someone is going through at home and we make
-            sure to never find out.
-          </GridListItem>
-        </GridList>
-      </Container>
+    <div className="pl-4 pr-4 ">
+      <div className="py-24sm:mt-32 mt-24 rounded-4xl bg-neutral-950 lg:mt-40 lg:py-32">
+        <SectionIntro
+          eyebrow="Our culture"
+          title="Balance your passion with your passion for life."
+          invert
+        >
+          <p>
+            We are a group of like-minded people who share the same core values.
+          </p>
+        </SectionIntro>
+        <Container className="mt-16">
+          <GridList>
+            <GridListItem title="Loyalty" invert>
+              Our team has been with us since the beginning because none of them
+              are allowed to have LinkedIn profiles.
+            </GridListItem>
+            <GridListItem title="Trust" invert>
+              We don’t care when our team works just as long as they are working
+              every waking second.
+            </GridListItem>
+            <GridListItem title="Compassion" invert>
+              You never know what someone is going through at home and we make
+              sure to never find out.
+            </GridListItem>
+          </GridList>
+        </Container>
+      </div>
     </div>
   )
 }
@@ -59,81 +50,55 @@ function Culture() {
 const team = [
   {
     title: 'CARDANO',
+    borderTop: '#4272EE',
+    borderBottom: '#264AA6',
     people: [
       {
-        name: 'Leslie Alexander',
-        role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
+        name: 'Peter Wolcott',
+        role: 'Project Catalyst',
+        image: { src: imageFiller },
       },
       {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
+        name: 'Felix Weber',
+        role: 'Cardano Ambassador',
+        image: { src: imageFiller },
       },
       {
-        name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
+        name: 'Dumpling',
+        role: 'Cardano Teacher',
+        image: { src: imageFiller },
+      },
+      {
+        name: 'Peter Bui',
+        role: 'Learn Cardano Podcast',
+        image: { src: imageFiller },
       },
     ],
   },
   {
     title: 'POLKADOT',
+    borderTop: '#ED1515',
+    borderBottom: '#FE64A3',
     people: [
       {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
+        name: 'Tomi Astikainen',
+        role: 'Polkadot Ambassador',
+        image: { src: imageFiller },
       },
       {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
+        name: 'Frank Bevr',
+        role: 'Polkadot Ambassador',
+        image: { src: imageFiller },
       },
       {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
-      },
-    ],
-  },
-  {
-    title: 'CREATORS',
-    people: [
-      {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
+        name: 'Just Luuu',
+        role: 'Polkadot Ambassador',
+        image: { src: imageFiller },
       },
       {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
-      },
-      {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
-      },
-    ],
-  },
-  {
-    title: 'EXTRA CREDIT',
-    people: [
-      {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
-      },
-      {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
-      },
-      {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
+        name: 'Viktor Venczel',
+        role: 'Polkadot Ambassador',
+        image: { src: imageFiller },
       },
     ],
   },
@@ -160,7 +125,13 @@ function Team() {
                   {group.people.map((person) => (
                     <li key={person.name}>
                       <FadeIn>
-                        <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
+                        <div
+                          className="group relative overflow-hidden rounded-3xl bg-neutral-100"
+                          style={{
+                            backgroundImage: `linear-gradient(${group.borderTop}, ${group.borderBottom})`,
+                            border: '2px solid transparent',
+                          }}
+                        >
                           <Image
                             alt=""
                             {...person.image}
@@ -189,9 +160,8 @@ function Team() {
 }
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+  title: 'Ecosystem',
+  description: 'uniFires Ecosystem - our ambassadors, creators and community.',
 }
 
 export default async function About() {
@@ -199,42 +169,34 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro
+        eyebrow="uniFires ecosystem"
+        title="We're stopping tribalism in blockchains."
+      >
         <p>
           We believe that our strength lies in our collaborative approach, which
           puts our clients at the center of everything we do.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
-          <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
-          </p>
-          <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
-          </p>
+          <p>FILL THIS CONTENT</p>
         </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
+          <StatListItem value="80~" label="Members in community" />
+          <StatListItem value="20" label="Influencers in community" />
+          <StatListItem value="4" label="Blockchains in community" />
         </StatList>
       </Container>
 
-      <Culture />
-
       <Team />
 
+      <Culture />
+
       <PageLinks
-        className="mt-24 sm:mt-32 lg:mt-40"
-        title="From the blog"
-        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
+        className="mt-24 pr-4 sm:mt-32 lg:mt-40"
+        title="FILL THIS CONTENT"
+        intro="FILL THIS CONTENT"
         pages={blogArticles}
       />
 
