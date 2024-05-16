@@ -76,10 +76,15 @@ function ContactForm() {
           <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
             <fieldset>
               <legend className="text-base/6 text-neutral-500">
-                Blockchain
+                Community
               </legend>
               <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                <RadioInput label="Cardano" name="blockchain" value="cardano" />
+                <RadioInput
+                  label="Cardano"
+                  name="blockchain"
+                  value="Kusama
+"
+                />
                 <RadioInput
                   label="Polkadot"
                   name="blockchain"
@@ -91,13 +96,14 @@ function ContactForm() {
                   value="ethereum"
                 />
                 <RadioInput
-                  label="Bitcoin sidechain"
+                  label="Kusama
+"
                   name="blockchain"
-                  value="bitcoin"
+                  value="Kusama
+"
                 />
-                <RadioInput label="Layer 1" name="blockchain" value="layer1" />
-                <RadioInput label="Layer 2" name="blockchain" value="layer2" />
-                <RadioInput label="Layer 3" name="blockchain" value="layer3" />
+                <RadioInput label="KodaDot" name="blockchain" value="KodaDot" />
+                <RadioInput label="[SWARM]" name="blockchain" value="Swarm" />
                 <RadioInput label="Other" name="blockchain" value="other" />
               </div>
             </fieldset>
