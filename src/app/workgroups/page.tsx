@@ -37,18 +37,24 @@ function WorkGroups({
                       className="h-16 w-16 flex-none"
                       unoptimized
                     />
-                    <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
+                    <h3 className="text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-3">
                       {workGroup.client}
                     </h3>
                   </div>
-                  <div className="mt-1 flex gap-x-4 sm:mt-0 lg:block">
+                  <div className="flex gap-x-4 sm:mt-0 lg:block">
                     <p className="text-sm tracking-tight text-neutral-950 after:ml-4 after:font-semibold after:text-neutral-300 after:content-['/'] lg:mt-2 lg:after:hidden">
-                      {workGroup.service}
+                      {workGroup.host}
                     </p>
-                    <p className="text-sm text-neutral-950 lg:mt-2">
+                    <p className="text-sm text-neutral-950">
                       <time dateTime={workGroup.date}>
                         {formatDate(workGroup.date)}
                       </time>
+                    </p>
+                  </div>
+
+                  <div className="flex  sm:mt-0 lg:block">
+                    <p className="text-sm text-neutral-950 ">
+                      <strong> {workGroup.frequency}</strong>{' '}
                     </p>
                   </div>
                 </div>
@@ -66,7 +72,7 @@ function WorkGroups({
                       href={workGroup.href}
                       aria-label={`Read Work Group: ${workGroup.client}`}
                     >
-                      Read Work Group
+                      VIEW GROUP
                     </Button>
                   </div>
                   {workGroup.testimonial && (

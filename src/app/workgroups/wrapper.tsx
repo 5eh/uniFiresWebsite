@@ -45,8 +45,8 @@ export default async function WorkGroupLayout({
                       </dd>
                     </div>
                     <div className="border-t border-neutral-200 px-6 py-4 first:border-t-0 sm:border-l sm:border-t-0">
-                      <dt className="font-semibold">Service</dt>
-                      <dd>{workGroup.service}</dd>
+                      <dt className="font-semibold">Call Frequency</dt>
+                      <dd>{workGroup.frequency}</dd>
                     </div>
                   </dl>
                 </div>

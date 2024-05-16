@@ -31,6 +31,7 @@ export interface Article {
   date: string
   title: string
   description: string
+  frequency: string
   author: {
     name: string
     role: string
@@ -44,6 +45,7 @@ export interface WorkGroup {
   host: string
   title: string
   description: string
+  frequency: string
   summary: Array<string>
   logo: ImageProps['src']
   image: ImagePropsWithOptionalAlt
