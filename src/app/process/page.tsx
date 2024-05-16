@@ -51,7 +51,7 @@ function Section({
   )
 }
 
-function Discover() {
+function Onboarding() {
   return (
     <Section title="ONBOARDING" image={{ src: background }}>
       <div className="space-y-6 text-base text-neutral-600">
@@ -105,7 +105,7 @@ function Discover() {
   )
 }
 
-function Build() {
+function Knowledge() {
   return (
     <Section title="KNOWLEDGE SYNTHESIS" image={{ src: background2, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
@@ -159,7 +159,7 @@ function Build() {
   )
 }
 
-function Deliver() {
+function Dissemination() {
   return (
     <Section title="DISSEMINATION" image={{ src: background2, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
@@ -290,9 +290,9 @@ export default function Process() {
       </PageIntro>
 
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
-        <Discover />
-        <Build />
-        <Deliver />
+        <Onboarding />
+        <Knowledge />
+        <Dissemination />
       </div>
 
       <FutureGroups />

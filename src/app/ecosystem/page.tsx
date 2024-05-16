@@ -59,14 +59,14 @@ function Culture() {
 
 const team = [
   {
-    title: 'CARDANO',
+    title: 'CARDANO DEPARTMENT',
     borderTop: '#4272EE',
     borderBottom: '#264AA6',
     people: [
       {
         name: 'Peter Wolcott',
         role: 'Project Catalyst',
-        image: { src: PeteHead },
+        image: { src: PeterHead },
       },
       {
         name: 'Felix Weber',
@@ -81,7 +81,7 @@ const team = [
       {
         name: 'Peter Bui',
         role: 'Learn Cardano Podcast',
-        image: { src: PeterHead },
+        image: { src: PeteHead },
       },
       {
         name: 'Mark Petruska',
@@ -91,7 +91,7 @@ const team = [
     ],
   },
   {
-    title: 'POLKADOT',
+    title: 'POLKADOT DEPARTMENT',
     borderTop: '#ED1515',
     borderBottom: '#FE64A3',
     people: [
@@ -192,14 +192,11 @@ export default async function About() {
           We believe that our strength lies in our collaborative approach, which
           puts our clients at the center of everything we do.
         </p>
-        <div className="mt-10 max-w-2xl space-y-6 text-base">
-          <p>FILL THIS CONTENT</p>
-        </div>
       </PageIntro>
       <Container className="mt-16">
         <StatList>
           <StatListItem value="80~" label="Members in community" />
-          <StatListItem value="20" label="Influencers in community" />
+          <StatListItem value="20" label="Influencers  in community" />
           <StatListItem value="4" label="Blockchains in community" />
         </StatList>
       </Container>
@@ -210,8 +207,8 @@ export default async function About() {
 
       <PageLinks
         className="mt-24 pr-4 sm:mt-32 lg:mt-40"
-        title="FILL THIS CONTENT"
-        intro="FILL THIS CONTENT"
+        title=""
+        intro=""
         pages={blogArticles}
       />
 
