@@ -76,6 +76,14 @@ function Header({
         <div className="flex items-center gap-x-8">
           <Button
             className="cursor-crosshair"
+            href="https://docs.unifires.com/"
+            target="_blank"
+            invert={invert}
+          >
+            DOCUMENTATION
+          </Button>
+          <Button
+            className="cursor-crosshair"
             href="https://calendar.google.com/calendar/u/0?cid=dW5pLmZpcmVzc3NAZ21haWwuY29t"
             target="_blank"
             invert={invert}
