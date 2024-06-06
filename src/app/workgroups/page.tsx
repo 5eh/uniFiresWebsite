@@ -67,12 +67,18 @@ function WorkGroups({
                       <p key={paragraph}>{paragraph}</p>
                     ))}
                   </div>
-                  <div className="mt-8 flex">
+                  <div className="mt-8 flex gap-4">
                     <Button
                       href={workGroup.href}
                       aria-label={`Read Work Group: ${workGroup.client}`}
                     >
                       VIEW GROUP
+                    </Button>
+                    <Button
+                      href={workGroup.href}
+                      aria-label={`Read Work Group: ${workGroup.client}`}
+                    >
+                      VIEW DOCS
                     </Button>
                   </div>
                   {workGroup.testimonial && (
@@ -104,8 +110,8 @@ export default async function Work() {
   return (
     <>
       <PageIntro
-        eyebrow="uniFires work groups"
-        title="Eliminating tribalism in blockchains."
+        eyebrow="uniFires workgroups"
+        title="BUILDING THE FRONTIER OF WEB3 COMMUNITIES"
       >
         <p>
           Our work groups are a place for leading developers in various

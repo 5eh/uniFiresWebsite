@@ -26,29 +26,29 @@ import { loadArticles } from '@/lib/mdx'
 function Culture() {
   return (
     <div className="pl-4 pr-4 ">
-      <div className="py-24sm:mt-32 mt-24 rounded-4xl bg-neutral-950 lg:mt-40 lg:py-32">
-        <SectionIntro
-          eyebrow="Our culture"
-          title="Balance your passion with your passion for life."
-          invert
-        >
+      <div className="py-24sm:mt-32 mt-24 rounded-4xl bg-neutral-950 pb-12 pt-12 lg:mt-40 lg:py-32">
+        <SectionIntro eyebrow="our values" title="OUR CORE VALUES" invert>
           <p>
             We are a group of like-minded people who share the same core values.
           </p>
         </SectionIntro>
         <Container className="mt-16">
-          <GridList>
-            <GridListItem title="Loyalty" invert>
-              Our team has been with us since the beginning because none of them
-              are allowed to have LinkedIn profiles.
+          <GridList className="lg:grid-cols-3 xl:grid-cols-4">
+            <GridListItem title="Accessible" invert>
+              We strongly focus on enabling accessible and valuable projects and
+              infrastructure for everyone.
             </GridListItem>
-            <GridListItem title="Trust" invert>
-              We don’t care when our team works just as long as they are working
-              every waking second.
+            <GridListItem title="Knowledge Sharing" invert>
+              Our workgroups are open to the public, we believe in shared and
+              open sourced knowledge sharing.
             </GridListItem>
-            <GridListItem title="Compassion" invert>
-              You never know what someone is going through at home and we make
-              sure to never find out.
+            <GridListItem title="Embetterment" invert>
+              Blockchains enable a brighter future, and we want to ensure the
+              communities grow and improve.
+            </GridListItem>
+            <GridListItem title="Trusted trustlessness" invert>
+              Our communities are decentralized yet still have a tight bond,
+              you&apos;re invited to stay.
             </GridListItem>
           </GridList>
         </Container>
@@ -141,7 +141,7 @@ function Team() {
                     <li key={person.name}>
                       <FadeIn>
                         <div
-                          className="group relative overflow-hidden rounded-3xl bg-neutral-100 grayscale filter transition duration-500 ease-in-out hover:grayscale-0"
+                          className="group relative overflow-hidden rounded-xl bg-neutral-100 grayscale filter transition duration-500 ease-in-out hover:grayscale-0"
                           style={{
                             backgroundImage: `linear-gradient(${group.borderTop}, ${group.borderBottom})`,
                             border: '2px solid transparent',
@@ -184,10 +184,7 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro
-        eyebrow="uniFires ecosystem"
-        title="We're stopping tribalism in blockchains."
-      >
+      <PageIntro eyebrow="uniFires ecosystem" title="DETRIBALIZING BLOCKCHAINS">
         <p>
           We believe that our strength lies in our collaborative approach, which
           puts our clients at the center of everything we do.
@@ -197,7 +194,8 @@ export default async function About() {
         <StatList>
           <StatListItem value="80~" label="Members in community" />
           <StatListItem value="20" label="Influencers  in community" />
-          <StatListItem value="4" label="Blockchains in community" />
+          <StatListItem value="4" label="Blockchains in community" />{' '}
+          <StatListItem value="26" label="Previous workshop calls" />
         </StatList>
       </Container>
 

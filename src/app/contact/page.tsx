@@ -1,14 +1,17 @@
 import { useId } from 'react'
 import { type Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { FadeIn } from '@/components/FadeIn'
+import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { Footprints } from '@/components/Footprints'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
+import { type WorkGroup, type MDXEntry, loadWorkGroups } from '@/lib/mdx'
+import { SectionIntro } from '@/components/SectionIntro'
 
 function TextInput({
   label,
@@ -124,30 +127,6 @@ function ContactDetails() {
 
       <Border className="mt-16 pt-16">
         <h2 className="font-display text-base font-semibold text-neutral-950">
-          Email us
-        </h2>
-        <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
-          {[
-            ['Team', 'team@unifires.com'],
-            ['Content', 'content@unifires.com'],
-          ].map(([label, email]) => (
-            <div key={email}>
-              <dt className="font-semibold text-neutral-950">{label}</dt>
-              <dd>
-                <Link
-                  href={`mailto:${email}`}
-                  className="text-neutral-600 hover:text-neutral-950"
-                >
-                  {email}
-                </Link>
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </Border>
-
-      <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-neutral-950">
           Follow us
         </h2>
         <SocialMedia className="mt-6" />
@@ -156,24 +135,95 @@ function ContactDetails() {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Let’s work together. We can’t wait to hear from you.',
-}
-
-export default function Contact() {
+function WorkGroups({
+  workGroups,
+}: {
+  workGroups: Array<MDXEntry<WorkGroup>>
+}) {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let’s work together">
-        <p>We can’t wait to hear from you.</p>
+      <SectionIntro title="WORK GROUPS" className="mt-24 sm:mt-32 lg:mt-40">
+        <p>
+          We host work groups for leading developers in various blockchains to
+          collaborate on ideas and share knowledge.
+        </p>
+      </SectionIntro>
+      <Container className="mt-16">
+        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          {workGroups.map((workGroup) => (
+            <FadeIn key={workGroup.href} className="flex">
+              <article className="relative flex w-full flex-col  p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+                <Link href={workGroup.href}>
+                  {' '}
+                  <h3>
+                    <span className=" inset-0 rounded-3xl" />
+                    <Image
+                      src={workGroup.logo}
+                      alt={workGroup.client}
+                      className="h-16 w-16"
+                      unoptimized
+                    />
+                  </h3>
+                  <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
+                    <time
+                      dateTime={workGroup.date.split('-')[0]}
+                      className="font-semibold"
+                    >
+                      {workGroup.date.split('-')[0]}
+                    </time>
+                    <span className="text-neutral-300" aria-hidden="true">
+                      /
+                    </span>
+                    <span>Work Group</span>
+                  </p>
+                  <p className="mt-6 font-display  font-semibold text-neutral-950 sm:text-xl md:text-2xl lg:text-2xl">
+                    {workGroup.title}
+                  </p>
+                  <p className="mt-4 text-base text-neutral-600">
+                    {workGroup.description}
+                  </p>
+                </Link>
+                {/* Work on wrapping container with workgroup link then add button to link to docs */}
+
+                <Link
+                  href={`https://docs.unifires.com/${workGroup.title.toLowerCase()}`}
+                >
+                  <Button className="mt-auto w-full justify-center ">
+                    View Documentation
+                  </Button>
+                </Link>
+              </article>
+            </FadeIn>
+          ))}
+        </FadeInStagger>
+      </Container>
+    </>
+  )
+}
+
+export const metadata: Metadata = {
+  title: 'Contact Us',
+  description: 'Join the alliance.',
+}
+
+export default async function Contact() {
+  let workGroups = (await loadWorkGroups()).slice(0, 3)
+
+  return (
+    <>
+      <PageIntro eyebrow="contact us" title="LETS WORK TOGETHER">
+        <p>Join the alliance.</p>
       </PageIntro>
 
-      <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <Container className="mt-8 sm:mt-12 lg:mt-16">
         <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
           <ContactForm />
           <ContactDetails />
         </div>
       </Container>
+      <div className="pb-24">
+        <WorkGroups workGroups={workGroups} />
+      </div>
     </>
   )
 }

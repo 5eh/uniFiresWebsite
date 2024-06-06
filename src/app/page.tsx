@@ -10,6 +10,7 @@ import CardanoLogo from '@/images/clients/cardano/CardanoLogo.png'
 import PolkadotLogo from '@/images/clients/polkadot/PolkadotLogo.png'
 
 import { type WorkGroup, type MDXEntry, loadWorkGroups } from '@/lib/mdx'
+import { Button } from '@/components/Button'
 
 type ClientLogoPair = [string, StaticImageData]
 const clients: ClientLogoPair[] = [
@@ -64,36 +65,46 @@ function WorkGroups({
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {workGroups.map((workGroup) => (
             <FadeIn key={workGroup.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
-                <h3>
-                  <Link href={workGroup.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
+              <article className="relative flex w-full flex-col  p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+                <Link href={workGroup.href}>
+                  {' '}
+                  <h3>
+                    <span className=" inset-0 rounded-3xl" />
                     <Image
                       src={workGroup.logo}
                       alt={workGroup.client}
                       className="h-16 w-16"
                       unoptimized
                     />
-                  </Link>
-                </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                  <time
-                    dateTime={workGroup.date.split('-')[0]}
-                    className="font-semibold"
-                  >
-                    {workGroup.date.split('-')[0]}
-                  </time>
-                  <span className="text-neutral-300" aria-hidden="true">
-                    /
-                  </span>
-                  <span>Work Group</span>
-                </p>
-                <p className="mt-6 font-display  font-semibold text-neutral-950 sm:text-xl md:text-2xl lg:text-2xl">
-                  {workGroup.title}
-                </p>
-                <p className="mt-4 text-base text-neutral-600">
-                  {workGroup.description}
-                </p>
+                  </h3>
+                  <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
+                    <time
+                      dateTime={workGroup.date.split('-')[0]}
+                      className="font-semibold"
+                    >
+                      {workGroup.date.split('-')[0]}
+                    </time>
+                    <span className="text-neutral-300" aria-hidden="true">
+                      /
+                    </span>
+                    <span>Work Group</span>
+                  </p>
+                  <p className="mt-6 font-display  font-semibold text-neutral-950 sm:text-xl md:text-2xl lg:text-2xl">
+                    {workGroup.title}
+                  </p>
+                  <p className="mt-4 text-base text-neutral-600">
+                    {workGroup.description}
+                  </p>
+                </Link>
+                {/* Work on wrapping container with workgroup link then add button to link to docs */}
+
+                <Link
+                  href={`https://docs.unifires.com/${workGroup.title.toLowerCase()}`}
+                >
+                  <Button className="mt-auto w-full justify-center ">
+                    View Documentation
+                  </Button>
+                </Link>
               </article>
             </FadeIn>
           ))}
