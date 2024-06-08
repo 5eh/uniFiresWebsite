@@ -98,9 +98,7 @@ function WorkGroups({
                 </Link>
                 {/* Work on wrapping container with workgroup link then add button to link to docs */}
 
-                <Link
-                  href={`https://docs.unifires.com/${workGroup.title.toLowerCase()}`}
-                >
+                <Link href={workGroup.docs}>
                   <Button className="mt-auto w-full justify-center ">
                     View Documentation
                   </Button>

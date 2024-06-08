@@ -44,6 +44,7 @@ export interface WorkGroup {
   client: string
   host: string
   title: string
+  docs: string
   description: string
   frequency: string
   summary: Array<string>
