@@ -9,7 +9,7 @@ import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
-import { formatDate } from '@/lib/formatDate'
+
 import { type WorkGroup, type MDXEntry, loadWorkGroups } from '@/lib/mdx'
 
 function WorkGroups({
@@ -29,32 +29,24 @@ function WorkGroups({
           <FadeIn key={workGroup.client}>
             <article>
               <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
-                <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
-                  <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
+                <div className="col-span-full sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1">
+                  <div className="block sm:items-center sm:justify-center sm:gap-x-6">
                     <Image
                       src={workGroup.logo}
                       alt=""
                       className="h-16 w-16 flex-none"
                       unoptimized
                     />
-                    <h3 className="text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-3">
-                      {workGroup.client}
-                    </h3>
                   </div>
-                  <div className="flex gap-x-4 sm:mt-0 lg:block">
-                    <p className="text-sm tracking-tight text-neutral-950 after:ml-4 after:font-semibold after:text-neutral-300 after:content-['/'] lg:mt-2 lg:after:hidden">
-                      {workGroup.host}
-                    </p>
-                    <p className="text-sm text-neutral-950">
-                      <time dateTime={workGroup.date}>
-                        {formatDate(workGroup.date)}
-                      </time>
+                  <div className="flex gap-x-4 pt-2 sm:mt-0 lg:block">
+                    <p className="text-sm text-neutral-950 ">
+                      <strong> {workGroup.frequency}</strong>{' '}
                     </p>
                   </div>
 
-                  <div className="flex  sm:mt-0 lg:block">
-                    <p className="text-sm text-neutral-950 ">
-                      <strong> {workGroup.frequency}</strong>{' '}
+                  <div className="lg:block">
+                    <p className="text-sm tracking-tight text-neutral-950 after:ml-4 after:font-semibold after:text-neutral-300  lg:after:hidden">
+                      Host <strong>:</strong> {workGroup.host}
                     </p>
                   </div>
                 </div>
@@ -75,8 +67,9 @@ function WorkGroups({
                       VIEW GROUP
                     </Button>
                     <Button
-                      href={workGroup.href}
-                      aria-label={`Read Work Group: ${workGroup.client}`}
+                      href={workGroup.docs}
+                      aria-label={`Read Work Group Docs: ${workGroup.docs}`}
+                      className="border border-gray-800 bg-white text-gray-800 hover:border-white hover:bg-gray-800 hover:text-white"
                     >
                       VIEW DOCS
                     </Button>
