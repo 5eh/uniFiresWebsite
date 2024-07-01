@@ -69,9 +69,9 @@ function WorkGroups({
                     <Button
                       href={workGroup.docs}
                       aria-label={`Read Work Group Docs: ${workGroup.docs}`}
-                      className="border border-gray-800 bg-white text-gray-800 hover:border-white hover:bg-gray-800 hover:text-white"
+                      className="border border-gray-800  text-gray-800 hover:border-white hover:bg-gray-800 hover:text-white"
                     >
-                      VIEW DOCS
+                      DOCS
                     </Button>
                   </div>
                   {workGroup.testimonial && (
