@@ -1,13 +1,15 @@
 import { Button } from '@/components/Button'
+import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Footprints } from '@/components/Footprints'
 import { PageIntro } from '@/components/PageIntro'
 import { StatList, StatListItem } from '@/components/StatList'
 import { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
+  title: 'Proposals',
   description: 'Join the alliance.',
 }
 
@@ -17,20 +19,22 @@ const proposals = [
     problem:
       'There are currently no running decentralized bridges between Cardano & Polkadot, and we ask ourselves how we can bring ADA to Polkadot and DOT to Cardano.',
     solution:
-      'We drive a feasibility study and enable further developments for a Polkadot & Cardano light-client bridge. These results should also drive other bridge developments on both ecosystems.',
+      'We drive a Feasibility Study and enable further developments for a Polkadot <> Cardano light-client bridge. These results should also drive other bridge developments on both ecosystems.',
     fundsRequested: '100K ADA',
-    date: "JAN '24",
+    date: "JUN '24",
     color: '#05A8DC',
+    reference: 'https://cardano.ideascale.com/c/idea/121371',
   },
   {
-    title: 'POLKADOT DIGITAL MARKETPLACE',
+    title: 'Cardano & Polkadot Digital Marketplace Factory',
     problem:
       'There is currently no easy way to build marketplaces inside of Polkadot. It also requires heavy technical understanding of Substrates, which makes it hard for entrepreneurs to join Polkadot.',
     solution:
-      'We are building a Digital Marketplace Factory that helps people build their marketplace concepts easily.',
-    fundsRequested: '100K DOT',
-    date: "JAN '24",
+      'An Open-Sourced Digital Factory line that produces pristine marketplaces for anyone to create, own and promote. Integrated into Cardano, and bridged to Polkadot for cross chain accessibility.',
+    fundsRequested: '88K DOT',
+    date: "MAY '24",
     color: '#E6007A',
+    reference: 'https://cardano.ideascale.com/c/idea/120525',
   },
 ]
 
@@ -45,9 +49,9 @@ export default function Proposals() {
       </PageIntro>
       <Container className="mt-16">
         <StatList>
-          <StatListItem value="3" label="Active Proposals" />
+          <StatListItem value="2" label="Active Proposals" />
           <StatListItem value="XX" label="Successful Proposals" />
-          <StatListItem value="3" label="Total Proposals" />
+          <StatListItem value="2" label="Total Proposals" />
         </StatList>
       </Container>
 
@@ -107,25 +111,39 @@ export default function Proposals() {
                   <FadeIn>
                     <p className="text-lg">{proposal.solution}</p>
                   </FadeIn>
-                  <div className="code mb-3 mt-3 flex justify-between text-xl font-semibold">
+                  <div className="code mb-2 mt-2 flex justify-between text-xl font-semibold">
                     <span>REQUESTED:</span>
                     <span>{proposal.fundsRequested}</span>
                   </div>
-                  <Button
-                    className="center code flex w-full rounded-none border hover:opacity-90"
-                    style={{
-                      borderColor: proposal.color,
-                      backgroundColor: `${proposal.color}B3`,
-                    }}
-                  >
-                    <p>REFERENCE</p>
-                  </Button>
+                  <Link href={`${proposal.reference}`} target="_blank">
+                    <Button
+                      className="center code flex w-full rounded-none border hover:opacity-90"
+                      style={{
+                        borderColor: proposal.color,
+                        backgroundColor: `${proposal.color}B3`,
+                      }}
+                    >
+                      <p>REFERENCE</p>
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </FadeIn>
           ))}
         </div>
       </Container>
+      <Container className="mb-8 mt-8 sm:mb-12 sm:mt-12 lg:mb-16 lg:mt-16">
+        <div className="rounded-md border border-gray-800 p-4 text-center">
+          <h2 className="text-xl font-bold">with more to come...</h2>
+          <Link href="/community">
+            <Button className="mt-4 bg-gray-800 text-white">COMMUNITY</Button>
+          </Link>
+        </div>
+      </Container>
+
+      <div className="mb-6 mt-6">
+        <ContactSection />
+      </div>
     </>
   )
 }
