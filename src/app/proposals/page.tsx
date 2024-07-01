@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 
 const proposals = [
   {
+    blockchain: 'Cardano',
     title: 'CARDANO & POLKADOT LIGHTBRIDGE FEASABILITY STUDY',
     problem:
       'There are currently no running decentralized bridges between Cardano & Polkadot, and we ask ourselves how we can bring ADA to Polkadot and DOT to Cardano.',
@@ -26,6 +27,7 @@ const proposals = [
     reference: 'https://cardano.ideascale.com/c/idea/121371',
   },
   {
+    blockchain: 'Cardano',
     title: 'Cardano & Polkadot Digital Marketplace Factory',
     problem:
       'There is currently no easy way to build marketplaces inside of Polkadot. It also requires heavy technical understanding of Substrates, which makes it hard for entrepreneurs to join Polkadot.',
@@ -33,7 +35,7 @@ const proposals = [
       'An Open-Sourced Digital Factory line that produces pristine marketplaces for anyone to create, own and promote. Integrated into Cardano, and bridged to Polkadot for cross chain accessibility.',
     fundsRequested: '88K DOT',
     date: "MAY '24",
-    color: '#E6007A',
+    color: '#05A8DC', // Polkadot is #6007A
     reference: 'https://cardano.ideascale.com/c/idea/120525',
   },
 ]
@@ -73,7 +75,7 @@ export default function Proposals() {
                       className="code font-semibold"
                       style={{ color: proposal.color }}
                     >
-                      {proposal.title.split(' ')[0]}
+                      {proposal.blockchain.toUpperCase()}
                     </h1>
                   </FadeIn>
                   <span className="font-md code text-gray-500">
@@ -89,7 +91,7 @@ export default function Proposals() {
                 />
                 <FadeIn>
                   <h3 className="pb-4 pl-3 pr-3 pt-4 text-xl font-bold">
-                    {proposal.title}
+                    {proposal.title.toUpperCase()}
                   </h3>
                 </FadeIn>
                 <div className="pb-3 pl-3 pr-3 pt-1">
