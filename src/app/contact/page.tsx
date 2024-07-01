@@ -209,7 +209,7 @@ export default async function Contact() {
 
   return (
     <>
-      <PageIntro eyebrow="contact us" title="Let’s ">
+      <PageIntro eyebrow="contact us" title="LETS UNIFY">
         <p>Join the alliance.</p>
       </PageIntro>
 

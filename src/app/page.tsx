@@ -11,6 +11,7 @@ import PolkadotLogo from '@/images/clients/polkadot/PolkadotLogo.png'
 
 import { type WorkGroup, type MDXEntry, loadWorkGroups } from '@/lib/mdx'
 import { Button } from '@/components/Button'
+import { PageIntro } from '@/components/PageIntro'
 
 type ClientLogoPair = [string, StaticImageData]
 const clients: ClientLogoPair[] = [
@@ -124,14 +125,13 @@ export default async function Home() {
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            uniFying Blockchains
-          </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            uniFires is an open network committed to helping engaged builders
-            from different blockchain ecosystems. Sharing resources, knowledge
-            and ideas to help build a thriving blockchain enabled future.
-          </p>
+          <PageIntro eyebrow="uniFires" title="UNIFYING BLOCKCHAINS">
+            <p>
+              uniFires is an open network committed to helping engaged builders
+              from different blockchain ecosystems. Sharing resources, knowledge
+              and ideas to help build a thriving blockchain enabled future.
+            </p>
+          </PageIntro>
         </FadeIn>
       </Container>
 
