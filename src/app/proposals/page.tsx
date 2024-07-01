@@ -4,6 +4,7 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Footprints } from '@/components/Footprints'
 import { PageIntro } from '@/components/PageIntro'
+import { SectionIntro } from '@/components/SectionIntro'
 import { StatList, StatListItem } from '@/components/StatList'
 import { Metadata } from 'next'
 import Link from 'next/link'
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   description: 'Join the alliance.',
 }
 
-const proposals = [
+const pendingProposals = [
   {
     blockchain: 'Cardano',
     title: 'CARDANO & POLKADOT LIGHTBRIDGE FEASABILITY STUDY',
@@ -40,6 +41,20 @@ const proposals = [
   },
 ]
 
+const successfulProposals = [
+  {
+    blockchain: 'Cardano',
+    title: 'Polkadot-Cardano uniFires',
+    problem:
+      'Adoption, governance and interoperability are important themes for both Polkadot and Cardano. The future is multichain but not many are equipped to build solutions that extend beyond their own bubble.',
+    solution:
+      'We onboard participants to thematic working groups to discuss, research, experiment and gather best practices for Cardano and Polkadot communities, sharing the results via far-reaching channels.',
+    fundsRequested: '140K ADA',
+    date: "NOV '23",
+    color: '#149B42',
+    reference: 'https://cardano.ideascale.com/c/idea/112389',
+  },
+]
 export default function Proposals() {
   return (
     <>
@@ -52,14 +67,16 @@ export default function Proposals() {
       <Container className="mt-16">
         <StatList>
           <StatListItem value="2" label="Active Proposals" />
-          <StatListItem value="XX" label="Successful Proposals" />
-          <StatListItem value="2" label="Total Proposals" />
+          <StatListItem value="1" label="Successful Proposals" />
+          <StatListItem value="3" label="Total Proposals" />
         </StatList>
       </Container>
 
       <Container className="mt-8 sm:mt-12 lg:mt-16">
+        <SectionIntro eyebrow="pending proposals" title=""></SectionIntro>
+
         <div className="grid grid-cols-1 gap-x-4 gap-y-2 lg:grid-cols-3">
-          {proposals.map((proposal, index) => (
+          {pendingProposals.map((proposal, index) => (
             <FadeIn key={index}>
               <div
                 className="rounded-md border text-[#3E3E3E]"
@@ -134,6 +151,87 @@ export default function Proposals() {
           ))}
         </div>
       </Container>
+
+      <Container className="mt-8 sm:mt-12 lg:mt-16">
+        <SectionIntro eyebrow="successful proposals" title=""></SectionIntro>
+
+        <div className="grid grid-cols-1 gap-x-4 gap-y-2 lg:grid-cols-3">
+          {successfulProposals.map((proposal, index) => (
+            <FadeIn key={index}>
+              <div
+                className="rounded-md border text-[#3E3E3E]"
+                style={{
+                  borderColor: `${proposal.color}/60`,
+                  backgroundColor: `${proposal.color}/30`,
+                  minHeight: '600px',
+                }}
+              >
+                <div className="flex justify-between pb-1 pl-2 pr-2 pt-1">
+                  <FadeIn>
+                    <h1
+                      className="code font-semibold"
+                      style={{ color: proposal.color }}
+                    >
+                      {proposal.blockchain.toUpperCase()}
+                    </h1>
+                  </FadeIn>
+                  <span className="font-md code text-gray-500">
+                    {proposal.date}
+                  </span>
+                </div>
+                <div
+                  className="w-full"
+                  style={{
+                    backgroundColor: `${proposal.color}`,
+                    height: '1px',
+                  }}
+                />
+                <FadeIn>
+                  <h3 className="pb-4 pl-3 pr-3 pt-4 text-xl font-bold">
+                    {proposal.title.toUpperCase()}
+                  </h3>
+                </FadeIn>
+                <div className="pb-3 pl-3 pr-3 pt-1">
+                  <h3
+                    className="code mb-4 mt-4 text-sm"
+                    style={{ color: proposal.color }}
+                  >
+                    PROBLEM
+                  </h3>
+                  <FadeIn>
+                    <p className="text-lg">{proposal.problem}</p>
+                  </FadeIn>
+                  <h3
+                    className="code mb-4 mt-4 text-sm"
+                    style={{ color: proposal.color }}
+                  >
+                    SOLUTION
+                  </h3>
+                  <FadeIn>
+                    <p className="text-lg">{proposal.solution}</p>
+                  </FadeIn>
+                  <div className="code mb-2 mt-2 flex justify-between text-xl font-semibold">
+                    <span>RECEIVED:</span>
+                    <span>{proposal.fundsRequested}</span>
+                  </div>
+                  <Link href={`${proposal.reference}`} target="_blank">
+                    <Button
+                      className="center code flex w-full rounded-none border hover:opacity-90"
+                      style={{
+                        borderColor: proposal.color,
+                        backgroundColor: `${proposal.color}B3`,
+                      }}
+                    >
+                      <p>REFERENCE</p>
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </Container>
+
       <Container className="mb-8 mt-8 sm:mb-12 sm:mt-12 lg:mb-16 lg:mt-16">
         <div className="rounded-md border border-gray-800 p-4 text-center">
           <h2 className="text-xl font-bold">with more to come...</h2>
