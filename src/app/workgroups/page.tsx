@@ -91,6 +91,7 @@ function WorkGroups({
     </Container>
   )
 }
+
 export const metadata: Metadata = {
   title: 'Work groups',
   description:

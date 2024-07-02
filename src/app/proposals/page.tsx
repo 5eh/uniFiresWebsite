@@ -36,7 +36,7 @@ const pendingProposals = [
       'An Open-Sourced Digital Factory line that produces pristine marketplaces for anyone to create, own and promote. Integrated into Cardano, and bridged to Polkadot for cross chain accessibility.',
     fundsRequested: '88K DOT',
     date: "MAY '24",
-    color: '#05A8DC', // Polkadot is #6007A
+    color: '#05A8DC', // Polkadot is #E6007A
     reference: 'https://cardano.ideascale.com/c/idea/120525',
   },
 ]

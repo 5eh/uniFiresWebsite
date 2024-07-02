@@ -60,10 +60,31 @@ export interface WorkGroup {
   }
 }
 
+export interface Document {
+  author: string
+  blockchain: string
+  date: string
+  href: string
+  title: string
+  internal: string
+  external: string
+  image: ImagePropsWithOptionalAlt
+  summary: string
+  creator: {
+    name: string
+    description: string
+  }
+  color: string
+}
+
 export function loadArticles() {
   return loadEntries<Article>('blog', 'article')
 }
 
 export function loadWorkGroups() {
   return loadEntries<WorkGroup>('workgroups', 'workGroup')
+}
+
+export function loadDocuments() {
+  return loadEntries<Document>('documents', 'document')
 }
