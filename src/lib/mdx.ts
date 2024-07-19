@@ -30,6 +30,7 @@ export type MDXEntry<T> = T & { href: string; metadata: T }
 export interface Article {
   date: string
   title: string
+  length: number
   description: string
   frequency: string
   author: {
@@ -70,11 +71,13 @@ export interface Document {
   external: string
   image: ImagePropsWithOptionalAlt
   summary: string
+  description: string
   creator: {
     name: string
     description: string
   }
   color: string
+  length: number
 }
 
 export function loadArticles() {

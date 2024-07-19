@@ -4,8 +4,6 @@ import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
 import { MDXComponents } from '@/components/MDXComponents'
 import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
-// import { PageLinks } from '@/components/PageLinks'
-
 import { type Document, type MDXEntry, loadDocuments } from '@/lib/mdx'
 
 export default async function DocumentLayout({
@@ -50,7 +48,7 @@ export default async function DocumentLayout({
         </Container>
       </article>
 
-      {document.length > 0 && (
+      {moreDocuments.length > 0 && (
         <PageLinks
           className="mt-24 sm:mt-32 lg:mt-40"
           title="More work groups"
