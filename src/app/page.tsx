@@ -24,21 +24,26 @@ function Clients() {
     <div className="ml-4 mr-4 mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
-          <div className="h-px flex-auto bg-white" />
+          <div className="h-px flex-auto bg-transparent md:bg-white" />
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
             Bringing together Web3 communities
           </h2>
-          <div className="h-px min-w-6 flex-auto bg-white" />
+          <div className="h-px flex-auto bg-transparent md:bg-white" />
         </FadeIn>
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 justify-center gap-x-8 gap-y-10 lg:grid-cols-2"
+            className="mt-10 grid grid-cols-1 justify-center gap-x-8 gap-y-10 md:grid-cols-2"
           >
             {clients.map(([client, logo]) => (
-              <li key={client} className="flex items-center justify-center">
+              <li key={client} className="flex items-center justify-center ">
                 <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+                  <Image
+                    src={logo}
+                    alt={client}
+                    unoptimized
+                    className="opacity-80"
+                  />
                 </FadeIn>
               </li>
             ))}

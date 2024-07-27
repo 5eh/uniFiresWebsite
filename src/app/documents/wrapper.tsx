@@ -41,7 +41,7 @@ export default async function DocumentLayout({
           </FadeIn>
         </header>
 
-        <Container className="mt-24 sm:mt-32 lg:mt-40">
+        <Container className="mt-32 sm:mt-32 lg:mt-40">
           <FadeIn>
             <MDXComponents.wrapper>{children}</MDXComponents.wrapper>
           </FadeIn>

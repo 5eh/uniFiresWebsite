@@ -60,59 +60,66 @@ function Header({
 
   return (
     <Container className="pl-2 pr-2 md:pl-6 md:pr-6 lg:pl-12 lg:pr-12">
-      <div className="flex items-center justify-evenly sm:justify-between">
-        <Link
-          href="/"
-          aria-label="Home"
-          onMouseEnter={() => setLogoHovered(true)}
-          onMouseLeave={() => setLogoHovered(false)}
-        >
-          <Logo
-            className="h-12 w-full sm:h-16"
-            invert={invert}
-            filled={logoHovered}
-          />
-        </Link>
-        <div className="flex items-center gap-x-8">
+      <div className="grid md:flex md:items-center md:justify-evenly">
+        <div className="pb-8 pt-2 md:pb-0">
+          <Link
+            href="/"
+            aria-label="Home"
+            onMouseEnter={() => setLogoHovered(true)}
+            onMouseLeave={() => setLogoHovered(false)}
+            className=""
+          >
+            <Logo
+              className="h-12 w-full sm:h-16"
+              invert={invert}
+              filled={logoHovered}
+            />
+          </Link>
+        </div>
+        <div className="grid w-full place-items-center justify-center gap-y-6  md:flex md:w-fit  md:gap-x-8">
           <Button
-            className="cursor-crosshair"
+            className="cursor-crosshair pl-16 pr-16 text-center md:ml-0 md:mr-0"
             href="https://docs.unifires.com/"
             target="_blank"
             invert={invert}
+            aria-label="Documentation"
           >
             DOCUMENTATION
           </Button>
           <Button
-            className="cursor-crosshair"
+            className="block cursor-crosshair  pl-16 pr-16 text-center md:ml-0 md:mr-0"
             href="https://calendar.google.com/calendar/u/0?cid=dW5pLmZpcmVzc3NAZ21haWwuY29t"
             target="_blank"
             invert={invert}
+            aria-label="Calender"
           >
-            JOIN A WORKSHOP
+            CALENDER
           </Button>
-          <button
-            ref={toggleRef}
-            type="button"
-            onClick={onToggle}
-            aria-expanded={expanded ? 'true' : 'false'}
-            aria-controls={panelId}
-            className={clsx(
-              'group -m-2.5 rounded-full p-2.5 transition',
-              invert
-                ? 'border border-transparent backdrop-blur-2xl hover:border-gray-200'
-                : 'border border-transparent backdrop-blur-2xl hover:border-gray-700',
-            )}
-            aria-label="Toggle navigation"
-          >
-            <Icon
+          <div>
+            <button
+              ref={toggleRef}
+              type="button"
+              onClick={onToggle}
+              aria-expanded={expanded ? 'true' : 'false'}
+              aria-controls={panelId}
               className={clsx(
-                'h-6 w-6',
+                'group -m-2.5 rounded-full p-2.5 transition',
                 invert
-                  ? 'fill-white group-hover:fill-neutral-200'
-                  : 'fill-neutral-950 group-hover:fill-neutral-700',
+                  ? 'border border-transparent backdrop-blur-2xl hover:border-gray-200'
+                  : 'border border-transparent backdrop-blur-2xl hover:border-gray-700',
               )}
-            />
-          </button>
+              aria-label="Toggle navigation"
+            >
+              <Icon
+                className={clsx(
+                  'h-6 w-6',
+                  invert
+                    ? 'fill-white group-hover:fill-neutral-200'
+                    : 'fill-neutral-950 group-hover:fill-neutral-700',
+                )}
+              />
+            </button>
+          </div>
         </div>
       </div>
     </Container>
@@ -195,7 +202,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <header>
         <div
-          className="absolute left-0 right-0 top-2 z-40  pb-8 pt-8 sm:pb-16 sm:pt-14"
+          className="max-md::pt-8 absolute left-0  right-0 top-2  z-40 pb-8 md:pb-16 md:pt-24 "
           aria-hidden={expanded ? 'true' : undefined}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? '' : undefined}
@@ -287,7 +294,9 @@ export function RootLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <RootLayoutContext.Provider value={{ logoHovered, setLogoHovered }}>
-      <RootLayoutInner key={pathname}>{children}</RootLayoutInner>
+      <RootLayoutInner key={pathname}>
+        <div className="pt-16 md:pt-0">{children}</div>
+      </RootLayoutInner>
     </RootLayoutContext.Provider>
   )
 }

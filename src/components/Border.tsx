@@ -58,8 +58,8 @@ export function BorderVertical<T extends React.ElementType = 'div'>({
         className,
         'relative before:absolute after:absolute',
         invert
-          ? 'before:bg-white after:bg-white/10'
-          : 'before:bg-neutral-950 after:bg-neutral-950/10',
+          ? 'md:before:bg-transparent md:after:bg-white/10'
+          : 'before:bg-neutral-950 lg:after:bg-neutral-950/10',
         position === 'left' &&
           'before:left-0 before:top-0 before:h-6 before:w-px after:bottom-0 after:left-0 after:top-8 after:w-px',
         position === 'top' &&
