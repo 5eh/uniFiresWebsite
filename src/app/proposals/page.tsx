@@ -93,23 +93,23 @@ export default function Proposals() {
       <Container className="mt-16">
         <StatList>
           <StatListItem
-            value={pendingProposals.length.toString()}
+            value={pendingProposals.length}
             label="Active Proposals"
           />
           <StatListItem
-            value={successfulProposals.length.toString()}
+            value={successfulProposals.length}
             label="Successful Proposals"
           />
           <StatListItem
             value={
-              pendingProposals.length.toString() +
+              pendingProposals.length +
               successfulProposals.length +
               unsuccessfulProposals.length
             }
             label="Total Proposals"
           />
           <StatListItem
-            value={unsuccessfulProposals.length.toString()}
+            value={unsuccessfulProposals.length}
             label="Unsuccessful Proposals"
           />
         </StatList>
