@@ -20,7 +20,11 @@ async function loadEntries<T extends { date: string }>(
         },
       ),
     )
-  ).sort((a, b) => b.date.localeCompare(a.date))
+  ).sort((a, b) => {
+    const dateA = a.date || '' // Provide a fallback empty string or another value
+    const dateB = b.date || '' // Provide a fallback empty string or another value
+    return dateB.localeCompare(dateA)
+  })
 }
 
 type ImagePropsWithOptionalAlt = Omit<ImageProps, 'alt'> & { alt?: string }
